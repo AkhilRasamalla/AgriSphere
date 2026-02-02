@@ -8,28 +8,44 @@ dotenv.config(); // Load environment variables
 const router = express.Router();
 
 // Create a new seed request
+// CREATE REQUEST (prevent duplicates)
 router.post('/request', async (req, res) => {
-    const { requesterId, requesterEmail, seedId, seedOwnerEmail } = req.body;
+  const { requesterId, requesterEmail, seedId, seedOwnerEmail } = req.body;
 
-    if (!requesterId || !requesterEmail || !seedId || !seedOwnerEmail) {
-        return res.status(400).json({ message: 'Missing required fields' });
+  try {
+    // 1️⃣ Check duplicate request
+    const existingRequest = await Request.findOne({
+      requesterId,
+      seedId,
+    });
+
+    if (existingRequest) {
+      return res.status(400).json({
+        message: 'Request already sent for this seed',
+      });
     }
 
-    try {
-        const newRequest = new Request({
-            requesterId,
-            requesterEmail,
-            seedId,
-            seedOwnerEmail,
-        });
+    // 2️⃣ Create new request
+    const newRequest = new Request({
+      requesterId,
+      requesterEmail,
+      seedId,
+      seedOwnerEmail,
+      status: 'pending',
+    });
 
-        await newRequest.save();
-        res.status(201).json({ message: 'Request created successfully', request: newRequest });
-    } catch (error) {
-        console.error('Error creating request:', error);
-        res.status(500).json({ error: 'Failed to create request' });
-    }
+    await newRequest.save();
+
+    res.status(201).json({
+      message: 'Seed request sent successfully',
+      request: newRequest,
+    });
+  } catch (error) {
+    console.error('Request creation error:', error);
+    res.status(500).json({ message: 'Server error' });
+  }
 });
+
 
 // Fetch all requests for the seeds owned by the user
 router.get('/owner/:email', async (req, res) => {

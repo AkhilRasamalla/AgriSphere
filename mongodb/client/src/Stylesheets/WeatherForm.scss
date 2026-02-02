@@ -1,14 +1,16 @@
 .weather-form {
-  .zipCode {
-    margin: 20px 0;
+  margin-top: 20px;
+}
 
-    .zipCodeInput {
-      max-width: 200px;
-      display: inline-block;
-    }
-  }
+.weather-form input,
+.weather-form select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 12px;
+}
 
-  .save-btn {
-    margin-top: 15px;
-  }
+.weather-form button {
+  padding: 10px;
+  width: 100%;
+  cursor: pointer;
 }

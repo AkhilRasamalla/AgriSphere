@@ -1,40 +1,34 @@
-// C:\Users\Disha\Climate-Smart-Agriculture-Platform\mongodb\client\src\services\userService.js
+import axios from "axios";
 
-import axios from 'axios';
+const API_URL = "http://localhost:5000/api/users"; // BACKEND PORT
 
 export const registerUser = async (userData) => {
-    try {
-        console.log("userService..");
-        const response = await axios.post('http://localhost:3000/api/users/signup', userData);
-        // alert('User registered successfully');
-        return response.data; // Return user data
-    } catch (error) {
-        console.error('Error registering user', error);
-        throw new Error('Registration failed. Please try again.'); // Throw error for handling in component
-    }
+  try {
+    console.log("Calling signup API...");
+    const response = await axios.post(`${API_URL}/signup`, userData);
+    return response.data;
+  } catch (error) {
+    console.error("Error registering user", error.response?.data || error.message);
+    throw new Error("Registration failed");
+  }
 };
 
 export const loginUser = async (userData) => {
-    try {
-        const response = await axios.post('http://localhost:3000/api/users/login', userData);
-        // alert('User logged in successfully');
-        return response.data.user; // Return user data
-    } catch (error) {
-        console.error('Error logging in user', error);
-        throw new Error('Login failed. Please check your credentials.'); // Throw error for handling in component
-    }
+  try {
+    const response = await axios.post(`${API_URL}/login`, userData);
+    return response.data;
+  } catch (error) {
+    console.error("Error logging in", error.response?.data || error.message);
+    throw new Error("Login failed");
+  }
 };
 
-
-
-// Function to get user data by ID
 export const getUserData = async (userId) => {
-    const response = await axios.get(`/api/users/${userId}`); // Update with the correct endpoint
-    return response.data;
+  const response = await axios.get(`${API_URL}/${userId}`);
+  return response.data;
 };
 
-// Function to update user data
 export const updateUserData = async (userId, userData) => {
-    const response = await axios.put(`/api/users/${userId}`, userData); // Update with the correct endpoint
-    return response.data;
+  const response = await axios.put(`${API_URL}/${userId}/preferences`, userData);
+  return response.data;
 };

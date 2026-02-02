@@ -1,94 +1,144 @@
-/* C:\Users\Disha\Climate-Smart-Agriculture-Platform\mongodb\client\src\components\Home.css */
-.home-container {
-    padding: 20px;
-    text-align: center;
-    background-color: #f9f9f9;
+.home {
+  padding: 60px 80px;
+  min-height: 100vh;
 }
 
-.blackText {
-    color : black;
-}
-.nav-bar-heading {
-    color: white;
-}
-
-h1 {
-    color: #2c3e50;
-    font-size: 36px;
-    margin-bottom: 20px;
+.hero {
+  max-width: 900px;
+  margin: 0 auto 40px auto;   /* center the block */
+  text-align: center;        /* center text */
 }
 
-.description {
-    font-size: 18px;
-    color: #34495e;
-    margin-bottom: 40px;
+.title {
+  text-align: center;
+  line-height: 1.2;
 }
 
-.card-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 20px;
-    margin-bottom: 40px;
+.subtitle {
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.card {
-    background-color: #ffffff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+.hero-tags {
+  margin-top: 26px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
 }
 
-.card h2 {
-    font-size: 24px;
-    color: #27ae60;
-    margin-bottom: 10px;
+.hero-tags span {
+  background: var(--chip);
+  padding: 10px 16px;
+  border-radius: 999px;
+  font-size: 14px;
+  border: 1px solid var(--border);
 }
 
-.card ul {
-    text-align: left;
-    color: #2c3e50;
-    list-style-type: square;
-    padding-left: 20px;
+/* FEATURES GRID */
+.features {
+  margin-top: 70px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 28px;
 }
 
-.learn-more {
-    display: inline-block;
-    margin-top: 10px;
-    color: #2980b9;
-    text-decoration: none;
+.feature-card {
+  background: var(--card);
+  padding: 28px;
+  border-radius: 18px;
+  border: 1px solid var(--border);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.learn-more:hover {
-    text-decoration: underline;
+.feature-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
 }
 
-.image-container {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    margin-bottom: 40px;
+.icon {
+  font-size: 34px;
+  margin-bottom: 14px;
 }
 
-.home-image {
-    width: 300px;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+.feature-card h3 {
+  margin-bottom: 8px;
+  color: var(--primary);
 }
 
-.footer {
-    padding: 20px;
-    background-color: #27ae60;
-    color: white;
-    font-size: 14px;
+.feature-card p {
+  color: var(--muted);
+  line-height: 1.6;
 }
 
-.footer a {
-    color: white;
-    text-decoration: none;
+/* CTA */
+.cta {
+  margin-top: 90px;
+  padding: 60px;
+  border-radius: 26px;
+  background: linear-gradient(135deg, #15803d, #22c55e);
+  color: #ffffff;
+
+  /* alignment */
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-.footer a:hover {
-    text-decoration: underline;
+
+.cta h2 {
+  font-size: 32px;
+  margin-bottom: 12px;
+}
+
+.cta p {
+  max-width: 700px;
+  opacity: 0.95;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .home {
+    padding: 40px 24px;
+  }
+
+  .title {
+    font-size: 42px;
+  }
+
+  .cta {
+    padding: 36px;
+  }
+}
+
+.highlight {
+  margin-left: auto;
+  margin-right: auto;        /* center the underline text */
+}
+/* underline highlight */
+.highlight::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 100%;
+  height: 6px;
+  background: linear-gradient(90deg, #22c55e, #16a34a);
+  border-radius: 4px;
+  opacity: 0.6;
+}
+.brand {
+  display: block;
+  font-size: 56px;
+  font-weight: 800;
+  color: var(--primary); /* green */
+}
+
+.tagline {
+  display: block;
+  margin-top: 10px;
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--text);
 }

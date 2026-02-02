@@ -1,104 +1,110 @@
-// C:\Users\Disha\Climate-Smart-Agriculture-Platform\mongodb\server\server.js
+// Load environment variables FIRST
+require("dotenv").config();
 
-const express = require('express');
-const bodyParser = require('body-parser');
-const cors = require('cors');
-const mongoose = require('mongoose');
-const axios = require('axios');
-const path = require('path');
-const farmRoutes = require('./routes/farmRoutes');
-require('dotenv').config();
-const purchaseRoutes = require('./routes/purchaseRoutes');
-const userRoutes = require('./routes/userRoutes');
-const cropRoutes = require('./routes/cropRoutes');
-const seedRoutes = require('./routes/seedRoutes');
-const requestRoutes = require('./routes/requestRoutes');
-const apis = require("./api");
+const express = require("express");
+const bodyParser = require("body-parser");
+const cors = require("cors");
+const mongoose = require("mongoose");
+const axios = require("axios");
+const path = require("path");
+
+const farmRoutes = require("./routes/farmRoutes");
+const purchaseRoutes = require("./routes/purchaseRoutes");
+const userRoutes = require("./routes/userRoutes");
+const cropRoutes = require("./routes/cropRoutes");
+const seedRoutes = require("./routes/seedRoutes");
+const requestRoutes = require("./routes/requestRoutes");
 
 const app = express();
+
+// =====================
+// Middleware
+// =====================
 app.use(bodyParser.json());
-app.use(cors({ origin: 'http://localhost:5000' }));
 
-const mongoURI = process.env.mongodbLink;
-mongoose.connect(mongoURI)
-   .then(() => console.log('MongoDB connected successfully'))
-   .catch(err => console.error('MongoDB connection error:', err));
+app.use(
+  cors({
+    origin: ["http://localhost:3000", "http://localhost:5001"],
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    credentials: true,
+  })
+);
 
-// Routes
-app.get('/disha', async (req, res) => {
-   res.json({ message: "url got" })
-})
+// =====================
+// MongoDB Connection
+// =====================
+mongoose
+  .connect(process.env.MONGO_URI)
+  .then(() => console.log("MongoDB connected successfully"))
+  .catch((err) => console.error("MongoDB connection error:", err));
 
-/////////////////////////////////////////////////////////////////////////////////////////////////////////
+// =====================
+// Weather API (FINAL + CORRECT)
+// =====================
+app.post("/api/weather", async (req, res) => {
+  const { zipCode, tempMetric } = req.body;
 
-// Route to get weather data
-app.post('/api/weather', async (req, res) => {
-   const { zipCode, tempMetric } = req.body;
-   console.log(zipCode + " " + tempMetric);
-   try {
-      // Check if the zip code is provided
-      if (!zipCode) {
-         return res.status(400).json({ error: 'Zip code is required' });
-      }
+  if (!zipCode || !tempMetric) {
+    return res.status(400).json({ error: "zipCode and tempMetric required" });
+  }
 
-      const coordinates = await getCoordinatesFromPincode(zipCode);
-      const weatherData = await getWeatherData(coordinates, tempMetric);
-      res.json(weatherData);
-   } catch (error) {
-      console.error('Error fetching weather data:', error.message);
-      res.status(500).json({ error: 'Internal Server Error', details: error.message });
-   }
+  try {
+    // 1️⃣ Zip → Latitude / Longitude
+    const geoURL = `https://api.opencagedata.com/geocode/v1/json?q=${zipCode}&key=${process.env.OPENCAGE_API_KEY}`;
+    const geoRes = await axios.get(geoURL);
+
+    if (!geoRes.data.results.length) {
+      return res.status(404).json({ error: "Invalid zip code" });
+    }
+
+    const { lat, lng } = geoRes.data.results[0].geometry;
+
+    // 2️⃣ Weather (metric OR imperial)
+    const weatherURL = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lng}&units=${tempMetric}&appid=${process.env.WEATHER_KEY}`;
+    const weatherRes = await axios.get(weatherURL);
+
+    // 3️⃣ Clean response
+    res.json({
+      city: weatherRes.data.name,
+      temperature: weatherRes.data.main.temp,
+      humidity: weatherRes.data.main.humidity,
+      description: weatherRes.data.weather[0].description,
+      unit: tempMetric === "metric" ? "°C" : "°F",
+    });
+  } catch (error) {
+    res.status(500).json({
+      message: "Failed to fetch weather data",
+      error: error.message,
+    });
+  }
 });
 
-// Function to get coordinates from pincode using OpenCage API
-const getCoordinatesFromPincode = async (pincode) => {
-   const openCageBaseUrl = "https://api.opencagedata.com/geocode/v1/json";
-   const openCageKey = process.env.OPENCAGE_API_KEY;  // OpenCage API key from .env
-   const url = `${openCageBaseUrl}?q=${pincode}&key=${openCageKey}`;
-
-   try {
-      const response = await axios.get(url);
-      const { lat, lng } = response.data.results[0].geometry;
-      return { latitude: lat, longitude: lng };
-   } catch (error) {
-      console.error('Error fetching coordinates:', error.message);
-      throw new Error('Unable to retrieve coordinates. Please try again.');
-   }
-};
-
-// Function to get weather data
-const getWeatherData = async ({ latitude, longitude }, tempMetric) => {
-   const weatherApiKey = process.env.WEATHER_KEY;
-   const weatherBaseUrl = 'https://api.openweathermap.org/data/2.5/weather';
-
-   const url = `${weatherBaseUrl}?lat=${latitude}&lon=${longitude}&appid=${weatherApiKey}&units=${tempMetric}`;
-
-   const response = await axios.get(url);
-   return response.data;
-};
-
-app.use('/api/users', userRoutes);
-app.use('/api/crops', cropRoutes);
-app.use('/api/farms', farmRoutes);
-app.use('/api/purchases', purchaseRoutes);
-app.use('/api/seeds', seedRoutes);
-app.use('/api/requests', requestRoutes);
+// =====================
+// Routes
+// =====================
+app.use("/api/users", userRoutes);
+app.use("/api/crops", cropRoutes);
+app.use("/api/farms", farmRoutes);
+app.use("/api/purchases", purchaseRoutes);
+app.use("/api/seeds", seedRoutes);
+app.use("/api/requests", requestRoutes);
+app.use("/api/prices", require("./routes/priceRoutes"));
 
 
-if (process.env.NODE_ENV === 'production') {
-   app.use(express.static(path.join(__dirname, '../client/build')));
-   app.get('*', (req, res) => {
-      res.sendFile(path.join(__dirname, '../client/build', 'index.html'));
-   });
+// =====================
+// Production Build
+// =====================
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static(path.join(__dirname, "../client/build")));
+  app.get("*", (req, res) => {
+    res.sendFile(path.join(__dirname, "../client/build", "index.html"));
+  });
 }
 
-// 404 Error Handler
-app.use((req, res) => {
-   res.status(404).json({ message: 'Route not found.' });
-});
-
-// Server listening
-const PORT = process.env.PORT || 3000;
+// =====================
+// Server Start
+// =====================
+const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
-   console.log(`Server is running on http://localhost:${PORT}`);
+  console.log(`Server running on http://localhost:${PORT}`);
 });

@@ -1,0 +1,204 @@
+.pc-root {
+  padding: 24px;
+  background: #f4f6f8;
+  min-height: 100vh;
+}
+
+.pc-header {
+  h1 {
+    margin: 0;
+    color: #1b5e20;
+  }
+
+  p {
+    margin: 6px 0 20px;
+    color: #555;
+  }
+}
+
+.pc-search {
+  padding: 10px 12px;
+  width: 260px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  margin-bottom: 16px;
+}
+
+.pc-table-wrapper {
+  background: white;
+  border-radius: 12px;
+  overflow-x: auto;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+
+  thead {
+    background: #1b5e20;
+    color: white;
+  }
+
+  th,
+  td {
+    padding: 12px;
+    text-align: center;
+  }
+
+  tbody {
+    tr:nth-child(even) {
+      background: #fafafa;
+    }
+
+    tr:hover {
+      background: #e8f5e9;
+    }
+  }
+}
+
+.crop-name {
+  font-weight: 600;
+}
+
+.badge {
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  color: white;
+
+  &.direct {
+    background: #2e7d32;
+  }
+
+  &.transplant {
+    background: #1565c0;
+  }
+}
+
+.maturity {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+
+  &-bar {
+    height: 6px;
+    width: 60px;
+    background: #2e7d32;
+    border-radius: 4px;
+  }
+}
+
+@media (max-width: 768px) {
+  table {
+    th:nth-child(2),
+    th:nth-child(3),
+    td:nth-child(2),
+    td:nth-child(3) {
+      display: none;
+    }
+  }
+}
+
+/* =================================
+   UNIVERSAL METHOD BADGE SYSTEM
+   ================================= */
+
+/* Default badge (covers ALL methods automatically) */
+.badge {
+  background-color: #455a64;   /* neutral dark */
+  color: #ffffff;
+  font-weight: 600;
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 13px;
+  text-transform: capitalize;
+  display: inline-block;
+}
+
+/* Known method overrides (optional but nice) */
+.badge.direct {
+  background-color: #2e7d32; /* green */
+}
+
+.badge.transplant {
+  background-color: #1565c0; /* blue */
+}
+
+.badge.sapling {
+  background-color: #6a1b9a; /* purple */
+}
+
+.badge.setts {
+  background-color: #ef6c00; /* orange */
+}
+
+.pc-root {
+  background-color: var(--bg);
+  color: var(--text);
+}
+
+.pc-table-wrapper table {
+  background-color: var(--table);
+}
+
+.pc-table-wrapper th,
+.pc-table-wrapper td {
+  color: var(--text);
+}
+
+
+/* ===============================
+   DARK MODE FIX — PLANTING CALENDAR
+   =============================== */
+
+/* Table background stays light for readability */
+.pc-table-wrapper table {
+  background-color: #ffffff;
+  color: #111111;
+}
+
+/* Force visible text in night mode */
+[data-theme="dark"] .pc-table-wrapper table,
+[data-theme="dark"] .pc-table-wrapper th,
+[data-theme="dark"] .pc-table-wrapper td {
+  color: #111111 !important;
+}
+
+/* Header row stays green */
+.pc-table-wrapper thead th {
+  background-color: #1b5e20;
+  color: #ffffff;
+}
+
+/* Alternate row shading */
+.pc-table-wrapper tbody tr:nth-child(even) {
+  background-color: #f4f8f4;
+}
+
+.pc-table-wrapper tbody tr:nth-child(odd) {
+  background-color: #ffffff;
+}
+
+/* Crop name emphasis */
+.pc-table-wrapper .crop-name {
+  font-weight: 600;
+  color: #0d3b12;
+}
+
+/* Badges remain visible */
+.badge.direct {
+  background-color: #2e7d32;
+  color: #ffffff;
+}
+
+.badge.transplant {
+  background-color: #1565c0;
+  color: #ffffff;
+}
+
+/* Maturity bar always visible */
+.maturity-bar {
+  background-color: #2e7d32;
+}

@@ -1,15 +1,25 @@
-// C:\Users\Disha\Climate-Smart-Agriculture-Platform\mongodb\client\src\services\cropService.js
-
-import axios from 'axios';
+import axios from "axios";
 
 export const predictCrop = async (data) => {
-    try {
-        console.log("got your api...");
-        console.log(data);
-        const response = await axios.post('http://localhost:3000/api/crops/predict', data);
-        console.log("Received prediction response:", response.data);
-        return response.data;
-    } catch (error) {
-        console.error('Error predicting crop', error);
-    }
+  try {
+    console.log("Sending data to backend:", data);
+
+    const response = await axios.post(
+      "http://localhost:5000/api/crops/predict",
+      data,
+      {
+        headers: {
+          "Content-Type": "application/json"
+        }
+      }
+    );
+
+    return response.data;
+  } catch (error) {
+    console.error(
+      "Error predicting crop:",
+      error.response?.data || error.message
+    );
+    throw error;
+  }
 };

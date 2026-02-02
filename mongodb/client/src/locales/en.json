@@ -1,0 +1,26 @@
+{
+  "appName": "AgriSphere",
+  "nav": {
+    "home": "Home",
+    "profile": "Profile",
+    "predict": "Predict Crop",
+    "weather": "Weather",
+    "farm": "Farm Details",
+    "seeds": "Seeds",
+    "requests": "Requests",
+    "calendar": "Planting Calendar",
+    "logout": "Logout"
+  },
+  "calendar": {
+    "title": "Planting Calendar",
+    "subtitle": "Crop planning based on season and sowing practices",
+    "search": "Search crop"
+  },
+  "profile": {
+    "welcome": "Welcome",
+    "preferences": "Preferences",
+    "notification": "Notification Frequency",
+    "units": "Preferred Units",
+    "save": "Save Preferences"
+  }
+}

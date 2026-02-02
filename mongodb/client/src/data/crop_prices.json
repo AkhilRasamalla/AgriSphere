@@ -1,0 +1,3602 @@
+[
+  {
+    "crop": "Rice",
+    "market": "Guntur",
+    "date": "2026-01-03",
+    "price": 2064
+  },
+  {
+    "crop": "Rice",
+    "market": "Guntur",
+    "date": "2026-01-04",
+    "price": 2102
+  },
+  {
+    "crop": "Rice",
+    "market": "Guntur",
+    "date": "2026-01-05",
+    "price": 2081
+  },
+  {
+    "crop": "Rice",
+    "market": "Guntur",
+    "date": "2026-01-06",
+    "price": 2102
+  },
+  {
+    "crop": "Rice",
+    "market": "Guntur",
+    "date": "2026-01-07",
+    "price": 2130
+  },
+  {
+    "crop": "Rice",
+    "market": "Guntur",
+    "date": "2026-01-08",
+    "price": 2098
+  },
+  {
+    "crop": "Rice",
+    "market": "Guntur",
+    "date": "2026-01-09",
+    "price": 2064
+  },
+  {
+    "crop": "Rice",
+    "market": "Guntur",
+    "date": "2026-01-10",
+    "price": 2103
+  },
+  {
+    "crop": "Rice",
+    "market": "Guntur",
+    "date": "2026-01-11",
+    "price": 2089
+  },
+  {
+    "crop": "Rice",
+    "market": "Guntur",
+    "date": "2026-01-12",
+    "price": 2068
+  },
+  {
+    "crop": "Rice",
+    "market": "Guntur",
+    "date": "2026-01-13",
+    "price": 2062
+  },
+  {
+    "crop": "Rice",
+    "market": "Guntur",
+    "date": "2026-01-14",
+    "price": 2057
+  },
+  {
+    "crop": "Rice",
+    "market": "Guntur",
+    "date": "2026-01-15",
+    "price": 2038
+  },
+  {
+    "crop": "Rice",
+    "market": "Guntur",
+    "date": "2026-01-16",
+    "price": 2064
+  },
+  {
+    "crop": "Rice",
+    "market": "Guntur",
+    "date": "2026-01-17",
+    "price": 2055
+  },
+  {
+    "crop": "Rice",
+    "market": "Guntur",
+    "date": "2026-01-18",
+    "price": 2040
+  },
+  {
+    "crop": "Rice",
+    "market": "Guntur",
+    "date": "2026-01-19",
+    "price": 2048
+  },
+  {
+    "crop": "Rice",
+    "market": "Guntur",
+    "date": "2026-01-20",
+    "price": 2020
+  },
+  {
+    "crop": "Rice",
+    "market": "Guntur",
+    "date": "2026-01-21",
+    "price": 2026
+  },
+  {
+    "crop": "Rice",
+    "market": "Guntur",
+    "date": "2026-01-22",
+    "price": 1994
+  },
+  {
+    "crop": "Rice",
+    "market": "Guntur",
+    "date": "2026-01-23",
+    "price": 1976
+  },
+  {
+    "crop": "Rice",
+    "market": "Guntur",
+    "date": "2026-01-24",
+    "price": 1957
+  },
+  {
+    "crop": "Rice",
+    "market": "Guntur",
+    "date": "2026-01-25",
+    "price": 1994
+  },
+  {
+    "crop": "Rice",
+    "market": "Guntur",
+    "date": "2026-01-26",
+    "price": 2016
+  },
+  {
+    "crop": "Rice",
+    "market": "Guntur",
+    "date": "2026-01-27",
+    "price": 1991
+  },
+  {
+    "crop": "Rice",
+    "market": "Guntur",
+    "date": "2026-01-28",
+    "price": 1980
+  },
+  {
+    "crop": "Rice",
+    "market": "Guntur",
+    "date": "2026-01-29",
+    "price": 1964
+  },
+  {
+    "crop": "Rice",
+    "market": "Guntur",
+    "date": "2026-01-30",
+    "price": 1964
+  },
+  {
+    "crop": "Rice",
+    "market": "Guntur",
+    "date": "2026-01-31",
+    "price": 1966
+  },
+  {
+    "crop": "Rice",
+    "market": "Guntur",
+    "date": "2026-02-01",
+    "price": 1934
+  },
+  {
+    "crop": "Rice",
+    "market": "Raipur",
+    "date": "2026-01-03",
+    "price": 2114
+  },
+  {
+    "crop": "Rice",
+    "market": "Raipur",
+    "date": "2026-01-04",
+    "price": 2082
+  },
+  {
+    "crop": "Rice",
+    "market": "Raipur",
+    "date": "2026-01-05",
+    "price": 2050
+  },
+  {
+    "crop": "Rice",
+    "market": "Raipur",
+    "date": "2026-01-06",
+    "price": 2077
+  },
+  {
+    "crop": "Rice",
+    "market": "Raipur",
+    "date": "2026-01-07",
+    "price": 2065
+  },
+  {
+    "crop": "Rice",
+    "market": "Raipur",
+    "date": "2026-01-08",
+    "price": 2054
+  },
+  {
+    "crop": "Rice",
+    "market": "Raipur",
+    "date": "2026-01-09",
+    "price": 2055
+  },
+  {
+    "crop": "Rice",
+    "market": "Raipur",
+    "date": "2026-01-10",
+    "price": 2032
+  },
+  {
+    "crop": "Rice",
+    "market": "Raipur",
+    "date": "2026-01-11",
+    "price": 2011
+  },
+  {
+    "crop": "Rice",
+    "market": "Raipur",
+    "date": "2026-01-12",
+    "price": 1982
+  },
+  {
+    "crop": "Rice",
+    "market": "Raipur",
+    "date": "2026-01-13",
+    "price": 2001
+  },
+  {
+    "crop": "Rice",
+    "market": "Raipur",
+    "date": "2026-01-14",
+    "price": 2019
+  },
+  {
+    "crop": "Rice",
+    "market": "Raipur",
+    "date": "2026-01-15",
+    "price": 2013
+  },
+  {
+    "crop": "Rice",
+    "market": "Raipur",
+    "date": "2026-01-16",
+    "price": 2011
+  },
+  {
+    "crop": "Rice",
+    "market": "Raipur",
+    "date": "2026-01-17",
+    "price": 1982
+  },
+  {
+    "crop": "Rice",
+    "market": "Raipur",
+    "date": "2026-01-18",
+    "price": 1955
+  },
+  {
+    "crop": "Rice",
+    "market": "Raipur",
+    "date": "2026-01-19",
+    "price": 1962
+  },
+  {
+    "crop": "Rice",
+    "market": "Raipur",
+    "date": "2026-01-20",
+    "price": 1996
+  },
+  {
+    "crop": "Rice",
+    "market": "Raipur",
+    "date": "2026-01-21",
+    "price": 2034
+  },
+  {
+    "crop": "Rice",
+    "market": "Raipur",
+    "date": "2026-01-22",
+    "price": 2059
+  },
+  {
+    "crop": "Rice",
+    "market": "Raipur",
+    "date": "2026-01-23",
+    "price": 2085
+  },
+  {
+    "crop": "Rice",
+    "market": "Raipur",
+    "date": "2026-01-24",
+    "price": 2057
+  },
+  {
+    "crop": "Rice",
+    "market": "Raipur",
+    "date": "2026-01-25",
+    "price": 2088
+  },
+  {
+    "crop": "Rice",
+    "market": "Raipur",
+    "date": "2026-01-26",
+    "price": 2120
+  },
+  {
+    "crop": "Rice",
+    "market": "Raipur",
+    "date": "2026-01-27",
+    "price": 2120
+  },
+  {
+    "crop": "Rice",
+    "market": "Raipur",
+    "date": "2026-01-28",
+    "price": 2081
+  },
+  {
+    "crop": "Rice",
+    "market": "Raipur",
+    "date": "2026-01-29",
+    "price": 2071
+  },
+  {
+    "crop": "Rice",
+    "market": "Raipur",
+    "date": "2026-01-30",
+    "price": 2079
+  },
+  {
+    "crop": "Rice",
+    "market": "Raipur",
+    "date": "2026-01-31",
+    "price": 2090
+  },
+  {
+    "crop": "Rice",
+    "market": "Raipur",
+    "date": "2026-02-01",
+    "price": 2058
+  },
+  {
+    "crop": "Wheat",
+    "market": "Indore",
+    "date": "2026-01-03",
+    "price": 2211
+  },
+  {
+    "crop": "Wheat",
+    "market": "Indore",
+    "date": "2026-01-04",
+    "price": 2231
+  },
+  {
+    "crop": "Wheat",
+    "market": "Indore",
+    "date": "2026-01-05",
+    "price": 2213
+  },
+  {
+    "crop": "Wheat",
+    "market": "Indore",
+    "date": "2026-01-06",
+    "price": 2202
+  },
+  {
+    "crop": "Wheat",
+    "market": "Indore",
+    "date": "2026-01-07",
+    "price": 2175
+  },
+  {
+    "crop": "Wheat",
+    "market": "Indore",
+    "date": "2026-01-08",
+    "price": 2169
+  },
+  {
+    "crop": "Wheat",
+    "market": "Indore",
+    "date": "2026-01-09",
+    "price": 2182
+  },
+  {
+    "crop": "Wheat",
+    "market": "Indore",
+    "date": "2026-01-10",
+    "price": 2184
+  },
+  {
+    "crop": "Wheat",
+    "market": "Indore",
+    "date": "2026-01-11",
+    "price": 2167
+  },
+  {
+    "crop": "Wheat",
+    "market": "Indore",
+    "date": "2026-01-12",
+    "price": 2156
+  },
+  {
+    "crop": "Wheat",
+    "market": "Indore",
+    "date": "2026-01-13",
+    "price": 2126
+  },
+  {
+    "crop": "Wheat",
+    "market": "Indore",
+    "date": "2026-01-14",
+    "price": 2163
+  },
+  {
+    "crop": "Wheat",
+    "market": "Indore",
+    "date": "2026-01-15",
+    "price": 2141
+  },
+  {
+    "crop": "Wheat",
+    "market": "Indore",
+    "date": "2026-01-16",
+    "price": 2137
+  },
+  {
+    "crop": "Wheat",
+    "market": "Indore",
+    "date": "2026-01-17",
+    "price": 2100
+  },
+  {
+    "crop": "Wheat",
+    "market": "Indore",
+    "date": "2026-01-18",
+    "price": 2118
+  },
+  {
+    "crop": "Wheat",
+    "market": "Indore",
+    "date": "2026-01-19",
+    "price": 2148
+  },
+  {
+    "crop": "Wheat",
+    "market": "Indore",
+    "date": "2026-01-20",
+    "price": 2117
+  },
+  {
+    "crop": "Wheat",
+    "market": "Indore",
+    "date": "2026-01-21",
+    "price": 2115
+  },
+  {
+    "crop": "Wheat",
+    "market": "Indore",
+    "date": "2026-01-22",
+    "price": 2147
+  },
+  {
+    "crop": "Wheat",
+    "market": "Indore",
+    "date": "2026-01-23",
+    "price": 2158
+  },
+  {
+    "crop": "Wheat",
+    "market": "Indore",
+    "date": "2026-01-24",
+    "price": 2164
+  },
+  {
+    "crop": "Wheat",
+    "market": "Indore",
+    "date": "2026-01-25",
+    "price": 2151
+  },
+  {
+    "crop": "Wheat",
+    "market": "Indore",
+    "date": "2026-01-26",
+    "price": 2125
+  },
+  {
+    "crop": "Wheat",
+    "market": "Indore",
+    "date": "2026-01-27",
+    "price": 2156
+  },
+  {
+    "crop": "Wheat",
+    "market": "Indore",
+    "date": "2026-01-28",
+    "price": 2157
+  },
+  {
+    "crop": "Wheat",
+    "market": "Indore",
+    "date": "2026-01-29",
+    "price": 2172
+  },
+  {
+    "crop": "Wheat",
+    "market": "Indore",
+    "date": "2026-01-30",
+    "price": 2185
+  },
+  {
+    "crop": "Wheat",
+    "market": "Indore",
+    "date": "2026-01-31",
+    "price": 2165
+  },
+  {
+    "crop": "Wheat",
+    "market": "Indore",
+    "date": "2026-02-01",
+    "price": 2172
+  },
+  {
+    "crop": "Wheat",
+    "market": "Ludhiana",
+    "date": "2026-01-03",
+    "price": 2202
+  },
+  {
+    "crop": "Wheat",
+    "market": "Ludhiana",
+    "date": "2026-01-04",
+    "price": 2189
+  },
+  {
+    "crop": "Wheat",
+    "market": "Ludhiana",
+    "date": "2026-01-05",
+    "price": 2186
+  },
+  {
+    "crop": "Wheat",
+    "market": "Ludhiana",
+    "date": "2026-01-06",
+    "price": 2193
+  },
+  {
+    "crop": "Wheat",
+    "market": "Ludhiana",
+    "date": "2026-01-07",
+    "price": 2167
+  },
+  {
+    "crop": "Wheat",
+    "market": "Ludhiana",
+    "date": "2026-01-08",
+    "price": 2181
+  },
+  {
+    "crop": "Wheat",
+    "market": "Ludhiana",
+    "date": "2026-01-09",
+    "price": 2162
+  },
+  {
+    "crop": "Wheat",
+    "market": "Ludhiana",
+    "date": "2026-01-10",
+    "price": 2131
+  },
+  {
+    "crop": "Wheat",
+    "market": "Ludhiana",
+    "date": "2026-01-11",
+    "price": 2112
+  },
+  {
+    "crop": "Wheat",
+    "market": "Ludhiana",
+    "date": "2026-01-12",
+    "price": 2151
+  },
+  {
+    "crop": "Wheat",
+    "market": "Ludhiana",
+    "date": "2026-01-13",
+    "price": 2162
+  },
+  {
+    "crop": "Wheat",
+    "market": "Ludhiana",
+    "date": "2026-01-14",
+    "price": 2180
+  },
+  {
+    "crop": "Wheat",
+    "market": "Ludhiana",
+    "date": "2026-01-15",
+    "price": 2219
+  },
+  {
+    "crop": "Wheat",
+    "market": "Ludhiana",
+    "date": "2026-01-16",
+    "price": 2235
+  },
+  {
+    "crop": "Wheat",
+    "market": "Ludhiana",
+    "date": "2026-01-17",
+    "price": 2212
+  },
+  {
+    "crop": "Wheat",
+    "market": "Ludhiana",
+    "date": "2026-01-18",
+    "price": 2188
+  },
+  {
+    "crop": "Wheat",
+    "market": "Ludhiana",
+    "date": "2026-01-19",
+    "price": 2204
+  },
+  {
+    "crop": "Wheat",
+    "market": "Ludhiana",
+    "date": "2026-01-20",
+    "price": 2186
+  },
+  {
+    "crop": "Wheat",
+    "market": "Ludhiana",
+    "date": "2026-01-21",
+    "price": 2167
+  },
+  {
+    "crop": "Wheat",
+    "market": "Ludhiana",
+    "date": "2026-01-22",
+    "price": 2201
+  },
+  {
+    "crop": "Wheat",
+    "market": "Ludhiana",
+    "date": "2026-01-23",
+    "price": 2176
+  },
+  {
+    "crop": "Wheat",
+    "market": "Ludhiana",
+    "date": "2026-01-24",
+    "price": 2150
+  },
+  {
+    "crop": "Wheat",
+    "market": "Ludhiana",
+    "date": "2026-01-25",
+    "price": 2172
+  },
+  {
+    "crop": "Wheat",
+    "market": "Ludhiana",
+    "date": "2026-01-26",
+    "price": 2210
+  },
+  {
+    "crop": "Wheat",
+    "market": "Ludhiana",
+    "date": "2026-01-27",
+    "price": 2202
+  },
+  {
+    "crop": "Wheat",
+    "market": "Ludhiana",
+    "date": "2026-01-28",
+    "price": 2229
+  },
+  {
+    "crop": "Wheat",
+    "market": "Ludhiana",
+    "date": "2026-01-29",
+    "price": 2213
+  },
+  {
+    "crop": "Wheat",
+    "market": "Ludhiana",
+    "date": "2026-01-30",
+    "price": 2214
+  },
+  {
+    "crop": "Wheat",
+    "market": "Ludhiana",
+    "date": "2026-01-31",
+    "price": 2205
+  },
+  {
+    "crop": "Wheat",
+    "market": "Ludhiana",
+    "date": "2026-02-01",
+    "price": 2173
+  },
+  {
+    "crop": "Maize",
+    "market": "Davanagere",
+    "date": "2026-01-03",
+    "price": 1771
+  },
+  {
+    "crop": "Maize",
+    "market": "Davanagere",
+    "date": "2026-01-04",
+    "price": 1789
+  },
+  {
+    "crop": "Maize",
+    "market": "Davanagere",
+    "date": "2026-01-05",
+    "price": 1811
+  },
+  {
+    "crop": "Maize",
+    "market": "Davanagere",
+    "date": "2026-01-06",
+    "price": 1802
+  },
+  {
+    "crop": "Maize",
+    "market": "Davanagere",
+    "date": "2026-01-07",
+    "price": 1830
+  },
+  {
+    "crop": "Maize",
+    "market": "Davanagere",
+    "date": "2026-01-08",
+    "price": 1814
+  },
+  {
+    "crop": "Maize",
+    "market": "Davanagere",
+    "date": "2026-01-09",
+    "price": 1849
+  },
+  {
+    "crop": "Maize",
+    "market": "Davanagere",
+    "date": "2026-01-10",
+    "price": 1828
+  },
+  {
+    "crop": "Maize",
+    "market": "Davanagere",
+    "date": "2026-01-11",
+    "price": 1846
+  },
+  {
+    "crop": "Maize",
+    "market": "Davanagere",
+    "date": "2026-01-12",
+    "price": 1817
+  },
+  {
+    "crop": "Maize",
+    "market": "Davanagere",
+    "date": "2026-01-13",
+    "price": 1835
+  },
+  {
+    "crop": "Maize",
+    "market": "Davanagere",
+    "date": "2026-01-14",
+    "price": 1823
+  },
+  {
+    "crop": "Maize",
+    "market": "Davanagere",
+    "date": "2026-01-15",
+    "price": 1844
+  },
+  {
+    "crop": "Maize",
+    "market": "Davanagere",
+    "date": "2026-01-16",
+    "price": 1864
+  },
+  {
+    "crop": "Maize",
+    "market": "Davanagere",
+    "date": "2026-01-17",
+    "price": 1824
+  },
+  {
+    "crop": "Maize",
+    "market": "Davanagere",
+    "date": "2026-01-18",
+    "price": 1808
+  },
+  {
+    "crop": "Maize",
+    "market": "Davanagere",
+    "date": "2026-01-19",
+    "price": 1841
+  },
+  {
+    "crop": "Maize",
+    "market": "Davanagere",
+    "date": "2026-01-20",
+    "price": 1847
+  },
+  {
+    "crop": "Maize",
+    "market": "Davanagere",
+    "date": "2026-01-21",
+    "price": 1857
+  },
+  {
+    "crop": "Maize",
+    "market": "Davanagere",
+    "date": "2026-01-22",
+    "price": 1822
+  },
+  {
+    "crop": "Maize",
+    "market": "Davanagere",
+    "date": "2026-01-23",
+    "price": 1805
+  },
+  {
+    "crop": "Maize",
+    "market": "Davanagere",
+    "date": "2026-01-24",
+    "price": 1765
+  },
+  {
+    "crop": "Maize",
+    "market": "Davanagere",
+    "date": "2026-01-25",
+    "price": 1763
+  },
+  {
+    "crop": "Maize",
+    "market": "Davanagere",
+    "date": "2026-01-26",
+    "price": 1791
+  },
+  {
+    "crop": "Maize",
+    "market": "Davanagere",
+    "date": "2026-01-27",
+    "price": 1828
+  },
+  {
+    "crop": "Maize",
+    "market": "Davanagere",
+    "date": "2026-01-28",
+    "price": 1838
+  },
+  {
+    "crop": "Maize",
+    "market": "Davanagere",
+    "date": "2026-01-29",
+    "price": 1852
+  },
+  {
+    "crop": "Maize",
+    "market": "Davanagere",
+    "date": "2026-01-30",
+    "price": 1822
+  },
+  {
+    "crop": "Maize",
+    "market": "Davanagere",
+    "date": "2026-01-31",
+    "price": 1835
+  },
+  {
+    "crop": "Maize",
+    "market": "Davanagere",
+    "date": "2026-02-01",
+    "price": 1836
+  },
+  {
+    "crop": "Maize",
+    "market": "Nizamabad",
+    "date": "2026-01-03",
+    "price": 1794
+  },
+  {
+    "crop": "Maize",
+    "market": "Nizamabad",
+    "date": "2026-01-04",
+    "price": 1804
+  },
+  {
+    "crop": "Maize",
+    "market": "Nizamabad",
+    "date": "2026-01-05",
+    "price": 1796
+  },
+  {
+    "crop": "Maize",
+    "market": "Nizamabad",
+    "date": "2026-01-06",
+    "price": 1781
+  },
+  {
+    "crop": "Maize",
+    "market": "Nizamabad",
+    "date": "2026-01-07",
+    "price": 1743
+  },
+  {
+    "crop": "Maize",
+    "market": "Nizamabad",
+    "date": "2026-01-08",
+    "price": 1752
+  },
+  {
+    "crop": "Maize",
+    "market": "Nizamabad",
+    "date": "2026-01-09",
+    "price": 1758
+  },
+  {
+    "crop": "Maize",
+    "market": "Nizamabad",
+    "date": "2026-01-10",
+    "price": 1724
+  },
+  {
+    "crop": "Maize",
+    "market": "Nizamabad",
+    "date": "2026-01-11",
+    "price": 1752
+  },
+  {
+    "crop": "Maize",
+    "market": "Nizamabad",
+    "date": "2026-01-12",
+    "price": 1736
+  },
+  {
+    "crop": "Maize",
+    "market": "Nizamabad",
+    "date": "2026-01-13",
+    "price": 1709
+  },
+  {
+    "crop": "Maize",
+    "market": "Nizamabad",
+    "date": "2026-01-14",
+    "price": 1715
+  },
+  {
+    "crop": "Maize",
+    "market": "Nizamabad",
+    "date": "2026-01-15",
+    "price": 1706
+  },
+  {
+    "crop": "Maize",
+    "market": "Nizamabad",
+    "date": "2026-01-16",
+    "price": 1715
+  },
+  {
+    "crop": "Maize",
+    "market": "Nizamabad",
+    "date": "2026-01-17",
+    "price": 1707
+  },
+  {
+    "crop": "Maize",
+    "market": "Nizamabad",
+    "date": "2026-01-18",
+    "price": 1744
+  },
+  {
+    "crop": "Maize",
+    "market": "Nizamabad",
+    "date": "2026-01-19",
+    "price": 1748
+  },
+  {
+    "crop": "Maize",
+    "market": "Nizamabad",
+    "date": "2026-01-20",
+    "price": 1712
+  },
+  {
+    "crop": "Maize",
+    "market": "Nizamabad",
+    "date": "2026-01-21",
+    "price": 1738
+  },
+  {
+    "crop": "Maize",
+    "market": "Nizamabad",
+    "date": "2026-01-22",
+    "price": 1706
+  },
+  {
+    "crop": "Maize",
+    "market": "Nizamabad",
+    "date": "2026-01-23",
+    "price": 1712
+  },
+  {
+    "crop": "Maize",
+    "market": "Nizamabad",
+    "date": "2026-01-24",
+    "price": 1735
+  },
+  {
+    "crop": "Maize",
+    "market": "Nizamabad",
+    "date": "2026-01-25",
+    "price": 1760
+  },
+  {
+    "crop": "Maize",
+    "market": "Nizamabad",
+    "date": "2026-01-26",
+    "price": 1792
+  },
+  {
+    "crop": "Maize",
+    "market": "Nizamabad",
+    "date": "2026-01-27",
+    "price": 1810
+  },
+  {
+    "crop": "Maize",
+    "market": "Nizamabad",
+    "date": "2026-01-28",
+    "price": 1778
+  },
+  {
+    "crop": "Maize",
+    "market": "Nizamabad",
+    "date": "2026-01-29",
+    "price": 1751
+  },
+  {
+    "crop": "Maize",
+    "market": "Nizamabad",
+    "date": "2026-01-30",
+    "price": 1760
+  },
+  {
+    "crop": "Maize",
+    "market": "Nizamabad",
+    "date": "2026-01-31",
+    "price": 1772
+  },
+  {
+    "crop": "Maize",
+    "market": "Nizamabad",
+    "date": "2026-02-01",
+    "price": 1804
+  },
+  {
+    "crop": "Tomato",
+    "market": "Kolar",
+    "date": "2026-01-03",
+    "price": 1224
+  },
+  {
+    "crop": "Tomato",
+    "market": "Kolar",
+    "date": "2026-01-04",
+    "price": 1209
+  },
+  {
+    "crop": "Tomato",
+    "market": "Kolar",
+    "date": "2026-01-05",
+    "price": 1189
+  },
+  {
+    "crop": "Tomato",
+    "market": "Kolar",
+    "date": "2026-01-06",
+    "price": 1224
+  },
+  {
+    "crop": "Tomato",
+    "market": "Kolar",
+    "date": "2026-01-07",
+    "price": 1187
+  },
+  {
+    "crop": "Tomato",
+    "market": "Kolar",
+    "date": "2026-01-08",
+    "price": 1154
+  },
+  {
+    "crop": "Tomato",
+    "market": "Kolar",
+    "date": "2026-01-09",
+    "price": 1169
+  },
+  {
+    "crop": "Tomato",
+    "market": "Kolar",
+    "date": "2026-01-10",
+    "price": 1202
+  },
+  {
+    "crop": "Tomato",
+    "market": "Kolar",
+    "date": "2026-01-11",
+    "price": 1176
+  },
+  {
+    "crop": "Tomato",
+    "market": "Kolar",
+    "date": "2026-01-12",
+    "price": 1144
+  },
+  {
+    "crop": "Tomato",
+    "market": "Kolar",
+    "date": "2026-01-13",
+    "price": 1177
+  },
+  {
+    "crop": "Tomato",
+    "market": "Kolar",
+    "date": "2026-01-14",
+    "price": 1210
+  },
+  {
+    "crop": "Tomato",
+    "market": "Kolar",
+    "date": "2026-01-15",
+    "price": 1249
+  },
+  {
+    "crop": "Tomato",
+    "market": "Kolar",
+    "date": "2026-01-16",
+    "price": 1258
+  },
+  {
+    "crop": "Tomato",
+    "market": "Kolar",
+    "date": "2026-01-17",
+    "price": 1268
+  },
+  {
+    "crop": "Tomato",
+    "market": "Kolar",
+    "date": "2026-01-18",
+    "price": 1255
+  },
+  {
+    "crop": "Tomato",
+    "market": "Kolar",
+    "date": "2026-01-19",
+    "price": 1222
+  },
+  {
+    "crop": "Tomato",
+    "market": "Kolar",
+    "date": "2026-01-20",
+    "price": 1188
+  },
+  {
+    "crop": "Tomato",
+    "market": "Kolar",
+    "date": "2026-01-21",
+    "price": 1173
+  },
+  {
+    "crop": "Tomato",
+    "market": "Kolar",
+    "date": "2026-01-22",
+    "price": 1181
+  },
+  {
+    "crop": "Tomato",
+    "market": "Kolar",
+    "date": "2026-01-23",
+    "price": 1154
+  },
+  {
+    "crop": "Tomato",
+    "market": "Kolar",
+    "date": "2026-01-24",
+    "price": 1146
+  },
+  {
+    "crop": "Tomato",
+    "market": "Kolar",
+    "date": "2026-01-25",
+    "price": 1128
+  },
+  {
+    "crop": "Tomato",
+    "market": "Kolar",
+    "date": "2026-01-26",
+    "price": 1117
+  },
+  {
+    "crop": "Tomato",
+    "market": "Kolar",
+    "date": "2026-01-27",
+    "price": 1093
+  },
+  {
+    "crop": "Tomato",
+    "market": "Kolar",
+    "date": "2026-01-28",
+    "price": 1067
+  },
+  {
+    "crop": "Tomato",
+    "market": "Kolar",
+    "date": "2026-01-29",
+    "price": 1057
+  },
+  {
+    "crop": "Tomato",
+    "market": "Kolar",
+    "date": "2026-01-30",
+    "price": 1023
+  },
+  {
+    "crop": "Tomato",
+    "market": "Kolar",
+    "date": "2026-01-31",
+    "price": 984
+  },
+  {
+    "crop": "Tomato",
+    "market": "Kolar",
+    "date": "2026-02-01",
+    "price": 1001
+  },
+  {
+    "crop": "Tomato",
+    "market": "Madanapalle",
+    "date": "2026-01-03",
+    "price": 1180
+  },
+  {
+    "crop": "Tomato",
+    "market": "Madanapalle",
+    "date": "2026-01-04",
+    "price": 1211
+  },
+  {
+    "crop": "Tomato",
+    "market": "Madanapalle",
+    "date": "2026-01-05",
+    "price": 1210
+  },
+  {
+    "crop": "Tomato",
+    "market": "Madanapalle",
+    "date": "2026-01-06",
+    "price": 1188
+  },
+  {
+    "crop": "Tomato",
+    "market": "Madanapalle",
+    "date": "2026-01-07",
+    "price": 1170
+  },
+  {
+    "crop": "Tomato",
+    "market": "Madanapalle",
+    "date": "2026-01-08",
+    "price": 1181
+  },
+  {
+    "crop": "Tomato",
+    "market": "Madanapalle",
+    "date": "2026-01-09",
+    "price": 1163
+  },
+  {
+    "crop": "Tomato",
+    "market": "Madanapalle",
+    "date": "2026-01-10",
+    "price": 1124
+  },
+  {
+    "crop": "Tomato",
+    "market": "Madanapalle",
+    "date": "2026-01-11",
+    "price": 1112
+  },
+  {
+    "crop": "Tomato",
+    "market": "Madanapalle",
+    "date": "2026-01-12",
+    "price": 1074
+  },
+  {
+    "crop": "Tomato",
+    "market": "Madanapalle",
+    "date": "2026-01-13",
+    "price": 1063
+  },
+  {
+    "crop": "Tomato",
+    "market": "Madanapalle",
+    "date": "2026-01-14",
+    "price": 1071
+  },
+  {
+    "crop": "Tomato",
+    "market": "Madanapalle",
+    "date": "2026-01-15",
+    "price": 1094
+  },
+  {
+    "crop": "Tomato",
+    "market": "Madanapalle",
+    "date": "2026-01-16",
+    "price": 1057
+  },
+  {
+    "crop": "Tomato",
+    "market": "Madanapalle",
+    "date": "2026-01-17",
+    "price": 1074
+  },
+  {
+    "crop": "Tomato",
+    "market": "Madanapalle",
+    "date": "2026-01-18",
+    "price": 1035
+  },
+  {
+    "crop": "Tomato",
+    "market": "Madanapalle",
+    "date": "2026-01-19",
+    "price": 999
+  },
+  {
+    "crop": "Tomato",
+    "market": "Madanapalle",
+    "date": "2026-01-20",
+    "price": 1001
+  },
+  {
+    "crop": "Tomato",
+    "market": "Madanapalle",
+    "date": "2026-01-21",
+    "price": 1031
+  },
+  {
+    "crop": "Tomato",
+    "market": "Madanapalle",
+    "date": "2026-01-22",
+    "price": 1070
+  },
+  {
+    "crop": "Tomato",
+    "market": "Madanapalle",
+    "date": "2026-01-23",
+    "price": 1097
+  },
+  {
+    "crop": "Tomato",
+    "market": "Madanapalle",
+    "date": "2026-01-24",
+    "price": 1092
+  },
+  {
+    "crop": "Tomato",
+    "market": "Madanapalle",
+    "date": "2026-01-25",
+    "price": 1095
+  },
+  {
+    "crop": "Tomato",
+    "market": "Madanapalle",
+    "date": "2026-01-26",
+    "price": 1062
+  },
+  {
+    "crop": "Tomato",
+    "market": "Madanapalle",
+    "date": "2026-01-27",
+    "price": 1043
+  },
+  {
+    "crop": "Tomato",
+    "market": "Madanapalle",
+    "date": "2026-01-28",
+    "price": 1070
+  },
+  {
+    "crop": "Tomato",
+    "market": "Madanapalle",
+    "date": "2026-01-29",
+    "price": 1070
+  },
+  {
+    "crop": "Tomato",
+    "market": "Madanapalle",
+    "date": "2026-01-30",
+    "price": 1079
+  },
+  {
+    "crop": "Tomato",
+    "market": "Madanapalle",
+    "date": "2026-01-31",
+    "price": 1113
+  },
+  {
+    "crop": "Tomato",
+    "market": "Madanapalle",
+    "date": "2026-02-01",
+    "price": 1125
+  },
+  {
+    "crop": "Onion",
+    "market": "Lasalgaon",
+    "date": "2026-01-03",
+    "price": 1877
+  },
+  {
+    "crop": "Onion",
+    "market": "Lasalgaon",
+    "date": "2026-01-04",
+    "price": 1900
+  },
+  {
+    "crop": "Onion",
+    "market": "Lasalgaon",
+    "date": "2026-01-05",
+    "price": 1912
+  },
+  {
+    "crop": "Onion",
+    "market": "Lasalgaon",
+    "date": "2026-01-06",
+    "price": 1921
+  },
+  {
+    "crop": "Onion",
+    "market": "Lasalgaon",
+    "date": "2026-01-07",
+    "price": 1948
+  },
+  {
+    "crop": "Onion",
+    "market": "Lasalgaon",
+    "date": "2026-01-08",
+    "price": 1964
+  },
+  {
+    "crop": "Onion",
+    "market": "Lasalgaon",
+    "date": "2026-01-09",
+    "price": 1940
+  },
+  {
+    "crop": "Onion",
+    "market": "Lasalgaon",
+    "date": "2026-01-10",
+    "price": 1979
+  },
+  {
+    "crop": "Onion",
+    "market": "Lasalgaon",
+    "date": "2026-01-11",
+    "price": 2012
+  },
+  {
+    "crop": "Onion",
+    "market": "Lasalgaon",
+    "date": "2026-01-12",
+    "price": 1975
+  },
+  {
+    "crop": "Onion",
+    "market": "Lasalgaon",
+    "date": "2026-01-13",
+    "price": 2000
+  },
+  {
+    "crop": "Onion",
+    "market": "Lasalgaon",
+    "date": "2026-01-14",
+    "price": 2014
+  },
+  {
+    "crop": "Onion",
+    "market": "Lasalgaon",
+    "date": "2026-01-15",
+    "price": 1993
+  },
+  {
+    "crop": "Onion",
+    "market": "Lasalgaon",
+    "date": "2026-01-16",
+    "price": 1992
+  },
+  {
+    "crop": "Onion",
+    "market": "Lasalgaon",
+    "date": "2026-01-17",
+    "price": 1988
+  },
+  {
+    "crop": "Onion",
+    "market": "Lasalgaon",
+    "date": "2026-01-18",
+    "price": 1956
+  },
+  {
+    "crop": "Onion",
+    "market": "Lasalgaon",
+    "date": "2026-01-19",
+    "price": 1946
+  },
+  {
+    "crop": "Onion",
+    "market": "Lasalgaon",
+    "date": "2026-01-20",
+    "price": 1957
+  },
+  {
+    "crop": "Onion",
+    "market": "Lasalgaon",
+    "date": "2026-01-21",
+    "price": 1944
+  },
+  {
+    "crop": "Onion",
+    "market": "Lasalgaon",
+    "date": "2026-01-22",
+    "price": 1975
+  },
+  {
+    "crop": "Onion",
+    "market": "Lasalgaon",
+    "date": "2026-01-23",
+    "price": 1966
+  },
+  {
+    "crop": "Onion",
+    "market": "Lasalgaon",
+    "date": "2026-01-24",
+    "price": 1947
+  },
+  {
+    "crop": "Onion",
+    "market": "Lasalgaon",
+    "date": "2026-01-25",
+    "price": 1983
+  },
+  {
+    "crop": "Onion",
+    "market": "Lasalgaon",
+    "date": "2026-01-26",
+    "price": 1969
+  },
+  {
+    "crop": "Onion",
+    "market": "Lasalgaon",
+    "date": "2026-01-27",
+    "price": 1959
+  },
+  {
+    "crop": "Onion",
+    "market": "Lasalgaon",
+    "date": "2026-01-28",
+    "price": 1991
+  },
+  {
+    "crop": "Onion",
+    "market": "Lasalgaon",
+    "date": "2026-01-29",
+    "price": 1967
+  },
+  {
+    "crop": "Onion",
+    "market": "Lasalgaon",
+    "date": "2026-01-30",
+    "price": 1980
+  },
+  {
+    "crop": "Onion",
+    "market": "Lasalgaon",
+    "date": "2026-01-31",
+    "price": 1991
+  },
+  {
+    "crop": "Onion",
+    "market": "Lasalgaon",
+    "date": "2026-02-01",
+    "price": 2021
+  },
+  {
+    "crop": "Onion",
+    "market": "Pimpalgaon",
+    "date": "2026-01-03",
+    "price": 1924
+  },
+  {
+    "crop": "Onion",
+    "market": "Pimpalgaon",
+    "date": "2026-01-04",
+    "price": 1923
+  },
+  {
+    "crop": "Onion",
+    "market": "Pimpalgaon",
+    "date": "2026-01-05",
+    "price": 1890
+  },
+  {
+    "crop": "Onion",
+    "market": "Pimpalgaon",
+    "date": "2026-01-06",
+    "price": 1926
+  },
+  {
+    "crop": "Onion",
+    "market": "Pimpalgaon",
+    "date": "2026-01-07",
+    "price": 1916
+  },
+  {
+    "crop": "Onion",
+    "market": "Pimpalgaon",
+    "date": "2026-01-08",
+    "price": 1882
+  },
+  {
+    "crop": "Onion",
+    "market": "Pimpalgaon",
+    "date": "2026-01-09",
+    "price": 1851
+  },
+  {
+    "crop": "Onion",
+    "market": "Pimpalgaon",
+    "date": "2026-01-10",
+    "price": 1879
+  },
+  {
+    "crop": "Onion",
+    "market": "Pimpalgaon",
+    "date": "2026-01-11",
+    "price": 1861
+  },
+  {
+    "crop": "Onion",
+    "market": "Pimpalgaon",
+    "date": "2026-01-12",
+    "price": 1889
+  },
+  {
+    "crop": "Onion",
+    "market": "Pimpalgaon",
+    "date": "2026-01-13",
+    "price": 1851
+  },
+  {
+    "crop": "Onion",
+    "market": "Pimpalgaon",
+    "date": "2026-01-14",
+    "price": 1815
+  },
+  {
+    "crop": "Onion",
+    "market": "Pimpalgaon",
+    "date": "2026-01-15",
+    "price": 1793
+  },
+  {
+    "crop": "Onion",
+    "market": "Pimpalgaon",
+    "date": "2026-01-16",
+    "price": 1829
+  },
+  {
+    "crop": "Onion",
+    "market": "Pimpalgaon",
+    "date": "2026-01-17",
+    "price": 1865
+  },
+  {
+    "crop": "Onion",
+    "market": "Pimpalgaon",
+    "date": "2026-01-18",
+    "price": 1904
+  },
+  {
+    "crop": "Onion",
+    "market": "Pimpalgaon",
+    "date": "2026-01-19",
+    "price": 1874
+  },
+  {
+    "crop": "Onion",
+    "market": "Pimpalgaon",
+    "date": "2026-01-20",
+    "price": 1878
+  },
+  {
+    "crop": "Onion",
+    "market": "Pimpalgaon",
+    "date": "2026-01-21",
+    "price": 1899
+  },
+  {
+    "crop": "Onion",
+    "market": "Pimpalgaon",
+    "date": "2026-01-22",
+    "price": 1922
+  },
+  {
+    "crop": "Onion",
+    "market": "Pimpalgaon",
+    "date": "2026-01-23",
+    "price": 1924
+  },
+  {
+    "crop": "Onion",
+    "market": "Pimpalgaon",
+    "date": "2026-01-24",
+    "price": 1946
+  },
+  {
+    "crop": "Onion",
+    "market": "Pimpalgaon",
+    "date": "2026-01-25",
+    "price": 1930
+  },
+  {
+    "crop": "Onion",
+    "market": "Pimpalgaon",
+    "date": "2026-01-26",
+    "price": 1897
+  },
+  {
+    "crop": "Onion",
+    "market": "Pimpalgaon",
+    "date": "2026-01-27",
+    "price": 1858
+  },
+  {
+    "crop": "Onion",
+    "market": "Pimpalgaon",
+    "date": "2026-01-28",
+    "price": 1867
+  },
+  {
+    "crop": "Onion",
+    "market": "Pimpalgaon",
+    "date": "2026-01-29",
+    "price": 1861
+  },
+  {
+    "crop": "Onion",
+    "market": "Pimpalgaon",
+    "date": "2026-01-30",
+    "price": 1882
+  },
+  {
+    "crop": "Onion",
+    "market": "Pimpalgaon",
+    "date": "2026-01-31",
+    "price": 1868
+  },
+  {
+    "crop": "Onion",
+    "market": "Pimpalgaon",
+    "date": "2026-02-01",
+    "price": 1869
+  },
+  {
+    "crop": "Potato",
+    "market": "Agra",
+    "date": "2026-01-03",
+    "price": 1628
+  },
+  {
+    "crop": "Potato",
+    "market": "Agra",
+    "date": "2026-01-04",
+    "price": 1611
+  },
+  {
+    "crop": "Potato",
+    "market": "Agra",
+    "date": "2026-01-05",
+    "price": 1572
+  },
+  {
+    "crop": "Potato",
+    "market": "Agra",
+    "date": "2026-01-06",
+    "price": 1555
+  },
+  {
+    "crop": "Potato",
+    "market": "Agra",
+    "date": "2026-01-07",
+    "price": 1522
+  },
+  {
+    "crop": "Potato",
+    "market": "Agra",
+    "date": "2026-01-08",
+    "price": 1514
+  },
+  {
+    "crop": "Potato",
+    "market": "Agra",
+    "date": "2026-01-09",
+    "price": 1506
+  },
+  {
+    "crop": "Potato",
+    "market": "Agra",
+    "date": "2026-01-10",
+    "price": 1545
+  },
+  {
+    "crop": "Potato",
+    "market": "Agra",
+    "date": "2026-01-11",
+    "price": 1568
+  },
+  {
+    "crop": "Potato",
+    "market": "Agra",
+    "date": "2026-01-12",
+    "price": 1553
+  },
+  {
+    "crop": "Potato",
+    "market": "Agra",
+    "date": "2026-01-13",
+    "price": 1513
+  },
+  {
+    "crop": "Potato",
+    "market": "Agra",
+    "date": "2026-01-14",
+    "price": 1491
+  },
+  {
+    "crop": "Potato",
+    "market": "Agra",
+    "date": "2026-01-15",
+    "price": 1496
+  },
+  {
+    "crop": "Potato",
+    "market": "Agra",
+    "date": "2026-01-16",
+    "price": 1516
+  },
+  {
+    "crop": "Potato",
+    "market": "Agra",
+    "date": "2026-01-17",
+    "price": 1525
+  },
+  {
+    "crop": "Potato",
+    "market": "Agra",
+    "date": "2026-01-18",
+    "price": 1498
+  },
+  {
+    "crop": "Potato",
+    "market": "Agra",
+    "date": "2026-01-19",
+    "price": 1522
+  },
+  {
+    "crop": "Potato",
+    "market": "Agra",
+    "date": "2026-01-20",
+    "price": 1488
+  },
+  {
+    "crop": "Potato",
+    "market": "Agra",
+    "date": "2026-01-21",
+    "price": 1487
+  },
+  {
+    "crop": "Potato",
+    "market": "Agra",
+    "date": "2026-01-22",
+    "price": 1467
+  },
+  {
+    "crop": "Potato",
+    "market": "Agra",
+    "date": "2026-01-23",
+    "price": 1470
+  },
+  {
+    "crop": "Potato",
+    "market": "Agra",
+    "date": "2026-01-24",
+    "price": 1480
+  },
+  {
+    "crop": "Potato",
+    "market": "Agra",
+    "date": "2026-01-25",
+    "price": 1496
+  },
+  {
+    "crop": "Potato",
+    "market": "Agra",
+    "date": "2026-01-26",
+    "price": 1456
+  },
+  {
+    "crop": "Potato",
+    "market": "Agra",
+    "date": "2026-01-27",
+    "price": 1470
+  },
+  {
+    "crop": "Potato",
+    "market": "Agra",
+    "date": "2026-01-28",
+    "price": 1506
+  },
+  {
+    "crop": "Potato",
+    "market": "Agra",
+    "date": "2026-01-29",
+    "price": 1542
+  },
+  {
+    "crop": "Potato",
+    "market": "Agra",
+    "date": "2026-01-30",
+    "price": 1560
+  },
+  {
+    "crop": "Potato",
+    "market": "Agra",
+    "date": "2026-01-31",
+    "price": 1561
+  },
+  {
+    "crop": "Potato",
+    "market": "Agra",
+    "date": "2026-02-01",
+    "price": 1534
+  },
+  {
+    "crop": "Potato",
+    "market": "Hooghly",
+    "date": "2026-01-03",
+    "price": 1609
+  },
+  {
+    "crop": "Potato",
+    "market": "Hooghly",
+    "date": "2026-01-04",
+    "price": 1578
+  },
+  {
+    "crop": "Potato",
+    "market": "Hooghly",
+    "date": "2026-01-05",
+    "price": 1563
+  },
+  {
+    "crop": "Potato",
+    "market": "Hooghly",
+    "date": "2026-01-06",
+    "price": 1535
+  },
+  {
+    "crop": "Potato",
+    "market": "Hooghly",
+    "date": "2026-01-07",
+    "price": 1561
+  },
+  {
+    "crop": "Potato",
+    "market": "Hooghly",
+    "date": "2026-01-08",
+    "price": 1592
+  },
+  {
+    "crop": "Potato",
+    "market": "Hooghly",
+    "date": "2026-01-09",
+    "price": 1603
+  },
+  {
+    "crop": "Potato",
+    "market": "Hooghly",
+    "date": "2026-01-10",
+    "price": 1621
+  },
+  {
+    "crop": "Potato",
+    "market": "Hooghly",
+    "date": "2026-01-11",
+    "price": 1596
+  },
+  {
+    "crop": "Potato",
+    "market": "Hooghly",
+    "date": "2026-01-12",
+    "price": 1556
+  },
+  {
+    "crop": "Potato",
+    "market": "Hooghly",
+    "date": "2026-01-13",
+    "price": 1539
+  },
+  {
+    "crop": "Potato",
+    "market": "Hooghly",
+    "date": "2026-01-14",
+    "price": 1567
+  },
+  {
+    "crop": "Potato",
+    "market": "Hooghly",
+    "date": "2026-01-15",
+    "price": 1559
+  },
+  {
+    "crop": "Potato",
+    "market": "Hooghly",
+    "date": "2026-01-16",
+    "price": 1568
+  },
+  {
+    "crop": "Potato",
+    "market": "Hooghly",
+    "date": "2026-01-17",
+    "price": 1548
+  },
+  {
+    "crop": "Potato",
+    "market": "Hooghly",
+    "date": "2026-01-18",
+    "price": 1564
+  },
+  {
+    "crop": "Potato",
+    "market": "Hooghly",
+    "date": "2026-01-19",
+    "price": 1536
+  },
+  {
+    "crop": "Potato",
+    "market": "Hooghly",
+    "date": "2026-01-20",
+    "price": 1507
+  },
+  {
+    "crop": "Potato",
+    "market": "Hooghly",
+    "date": "2026-01-21",
+    "price": 1510
+  },
+  {
+    "crop": "Potato",
+    "market": "Hooghly",
+    "date": "2026-01-22",
+    "price": 1521
+  },
+  {
+    "crop": "Potato",
+    "market": "Hooghly",
+    "date": "2026-01-23",
+    "price": 1529
+  },
+  {
+    "crop": "Potato",
+    "market": "Hooghly",
+    "date": "2026-01-24",
+    "price": 1504
+  },
+  {
+    "crop": "Potato",
+    "market": "Hooghly",
+    "date": "2026-01-25",
+    "price": 1528
+  },
+  {
+    "crop": "Potato",
+    "market": "Hooghly",
+    "date": "2026-01-26",
+    "price": 1567
+  },
+  {
+    "crop": "Potato",
+    "market": "Hooghly",
+    "date": "2026-01-27",
+    "price": 1575
+  },
+  {
+    "crop": "Potato",
+    "market": "Hooghly",
+    "date": "2026-01-28",
+    "price": 1546
+  },
+  {
+    "crop": "Potato",
+    "market": "Hooghly",
+    "date": "2026-01-29",
+    "price": 1539
+  },
+  {
+    "crop": "Potato",
+    "market": "Hooghly",
+    "date": "2026-01-30",
+    "price": 1504
+  },
+  {
+    "crop": "Potato",
+    "market": "Hooghly",
+    "date": "2026-01-31",
+    "price": 1515
+  },
+  {
+    "crop": "Potato",
+    "market": "Hooghly",
+    "date": "2026-02-01",
+    "price": 1519
+  },
+  {
+    "crop": "Cotton",
+    "market": "Adilabad",
+    "date": "2026-01-03",
+    "price": 6180
+  },
+  {
+    "crop": "Cotton",
+    "market": "Adilabad",
+    "date": "2026-01-04",
+    "price": 6151
+  },
+  {
+    "crop": "Cotton",
+    "market": "Adilabad",
+    "date": "2026-01-05",
+    "price": 6136
+  },
+  {
+    "crop": "Cotton",
+    "market": "Adilabad",
+    "date": "2026-01-06",
+    "price": 6129
+  },
+  {
+    "crop": "Cotton",
+    "market": "Adilabad",
+    "date": "2026-01-07",
+    "price": 6091
+  },
+  {
+    "crop": "Cotton",
+    "market": "Adilabad",
+    "date": "2026-01-08",
+    "price": 6098
+  },
+  {
+    "crop": "Cotton",
+    "market": "Adilabad",
+    "date": "2026-01-09",
+    "price": 6088
+  },
+  {
+    "crop": "Cotton",
+    "market": "Adilabad",
+    "date": "2026-01-10",
+    "price": 6071
+  },
+  {
+    "crop": "Cotton",
+    "market": "Adilabad",
+    "date": "2026-01-11",
+    "price": 6089
+  },
+  {
+    "crop": "Cotton",
+    "market": "Adilabad",
+    "date": "2026-01-12",
+    "price": 6119
+  },
+  {
+    "crop": "Cotton",
+    "market": "Adilabad",
+    "date": "2026-01-13",
+    "price": 6153
+  },
+  {
+    "crop": "Cotton",
+    "market": "Adilabad",
+    "date": "2026-01-14",
+    "price": 6155
+  },
+  {
+    "crop": "Cotton",
+    "market": "Adilabad",
+    "date": "2026-01-15",
+    "price": 6191
+  },
+  {
+    "crop": "Cotton",
+    "market": "Adilabad",
+    "date": "2026-01-16",
+    "price": 6220
+  },
+  {
+    "crop": "Cotton",
+    "market": "Adilabad",
+    "date": "2026-01-17",
+    "price": 6230
+  },
+  {
+    "crop": "Cotton",
+    "market": "Adilabad",
+    "date": "2026-01-18",
+    "price": 6255
+  },
+  {
+    "crop": "Cotton",
+    "market": "Adilabad",
+    "date": "2026-01-19",
+    "price": 6262
+  },
+  {
+    "crop": "Cotton",
+    "market": "Adilabad",
+    "date": "2026-01-20",
+    "price": 6296
+  },
+  {
+    "crop": "Cotton",
+    "market": "Adilabad",
+    "date": "2026-01-21",
+    "price": 6295
+  },
+  {
+    "crop": "Cotton",
+    "market": "Adilabad",
+    "date": "2026-01-22",
+    "price": 6262
+  },
+  {
+    "crop": "Cotton",
+    "market": "Adilabad",
+    "date": "2026-01-23",
+    "price": 6239
+  },
+  {
+    "crop": "Cotton",
+    "market": "Adilabad",
+    "date": "2026-01-24",
+    "price": 6205
+  },
+  {
+    "crop": "Cotton",
+    "market": "Adilabad",
+    "date": "2026-01-25",
+    "price": 6205
+  },
+  {
+    "crop": "Cotton",
+    "market": "Adilabad",
+    "date": "2026-01-26",
+    "price": 6165
+  },
+  {
+    "crop": "Cotton",
+    "market": "Adilabad",
+    "date": "2026-01-27",
+    "price": 6155
+  },
+  {
+    "crop": "Cotton",
+    "market": "Adilabad",
+    "date": "2026-01-28",
+    "price": 6120
+  },
+  {
+    "crop": "Cotton",
+    "market": "Adilabad",
+    "date": "2026-01-29",
+    "price": 6135
+  },
+  {
+    "crop": "Cotton",
+    "market": "Adilabad",
+    "date": "2026-01-30",
+    "price": 6159
+  },
+  {
+    "crop": "Cotton",
+    "market": "Adilabad",
+    "date": "2026-01-31",
+    "price": 6135
+  },
+  {
+    "crop": "Cotton",
+    "market": "Adilabad",
+    "date": "2026-02-01",
+    "price": 6172
+  },
+  {
+    "crop": "Cotton",
+    "market": "Akola",
+    "date": "2026-01-03",
+    "price": 6162
+  },
+  {
+    "crop": "Cotton",
+    "market": "Akola",
+    "date": "2026-01-04",
+    "price": 6162
+  },
+  {
+    "crop": "Cotton",
+    "market": "Akola",
+    "date": "2026-01-05",
+    "price": 6186
+  },
+  {
+    "crop": "Cotton",
+    "market": "Akola",
+    "date": "2026-01-06",
+    "price": 6183
+  },
+  {
+    "crop": "Cotton",
+    "market": "Akola",
+    "date": "2026-01-07",
+    "price": 6206
+  },
+  {
+    "crop": "Cotton",
+    "market": "Akola",
+    "date": "2026-01-08",
+    "price": 6178
+  },
+  {
+    "crop": "Cotton",
+    "market": "Akola",
+    "date": "2026-01-09",
+    "price": 6138
+  },
+  {
+    "crop": "Cotton",
+    "market": "Akola",
+    "date": "2026-01-10",
+    "price": 6149
+  },
+  {
+    "crop": "Cotton",
+    "market": "Akola",
+    "date": "2026-01-11",
+    "price": 6143
+  },
+  {
+    "crop": "Cotton",
+    "market": "Akola",
+    "date": "2026-01-12",
+    "price": 6166
+  },
+  {
+    "crop": "Cotton",
+    "market": "Akola",
+    "date": "2026-01-13",
+    "price": 6193
+  },
+  {
+    "crop": "Cotton",
+    "market": "Akola",
+    "date": "2026-01-14",
+    "price": 6224
+  },
+  {
+    "crop": "Cotton",
+    "market": "Akola",
+    "date": "2026-01-15",
+    "price": 6213
+  },
+  {
+    "crop": "Cotton",
+    "market": "Akola",
+    "date": "2026-01-16",
+    "price": 6188
+  },
+  {
+    "crop": "Cotton",
+    "market": "Akola",
+    "date": "2026-01-17",
+    "price": 6223
+  },
+  {
+    "crop": "Cotton",
+    "market": "Akola",
+    "date": "2026-01-18",
+    "price": 6214
+  },
+  {
+    "crop": "Cotton",
+    "market": "Akola",
+    "date": "2026-01-19",
+    "price": 6250
+  },
+  {
+    "crop": "Cotton",
+    "market": "Akola",
+    "date": "2026-01-20",
+    "price": 6210
+  },
+  {
+    "crop": "Cotton",
+    "market": "Akola",
+    "date": "2026-01-21",
+    "price": 6230
+  },
+  {
+    "crop": "Cotton",
+    "market": "Akola",
+    "date": "2026-01-22",
+    "price": 6265
+  },
+  {
+    "crop": "Cotton",
+    "market": "Akola",
+    "date": "2026-01-23",
+    "price": 6281
+  },
+  {
+    "crop": "Cotton",
+    "market": "Akola",
+    "date": "2026-01-24",
+    "price": 6313
+  },
+  {
+    "crop": "Cotton",
+    "market": "Akola",
+    "date": "2026-01-25",
+    "price": 6295
+  },
+  {
+    "crop": "Cotton",
+    "market": "Akola",
+    "date": "2026-01-26",
+    "price": 6312
+  },
+  {
+    "crop": "Cotton",
+    "market": "Akola",
+    "date": "2026-01-27",
+    "price": 6333
+  },
+  {
+    "crop": "Cotton",
+    "market": "Akola",
+    "date": "2026-01-28",
+    "price": 6302
+  },
+  {
+    "crop": "Cotton",
+    "market": "Akola",
+    "date": "2026-01-29",
+    "price": 6316
+  },
+  {
+    "crop": "Cotton",
+    "market": "Akola",
+    "date": "2026-01-30",
+    "price": 6321
+  },
+  {
+    "crop": "Cotton",
+    "market": "Akola",
+    "date": "2026-01-31",
+    "price": 6324
+  },
+  {
+    "crop": "Cotton",
+    "market": "Akola",
+    "date": "2026-02-01",
+    "price": 6361
+  },
+  {
+    "crop": "Groundnut",
+    "market": "Rajkot",
+    "date": "2026-01-03",
+    "price": 5360
+  },
+  {
+    "crop": "Groundnut",
+    "market": "Rajkot",
+    "date": "2026-01-04",
+    "price": 5389
+  },
+  {
+    "crop": "Groundnut",
+    "market": "Rajkot",
+    "date": "2026-01-05",
+    "price": 5366
+  },
+  {
+    "crop": "Groundnut",
+    "market": "Rajkot",
+    "date": "2026-01-06",
+    "price": 5389
+  },
+  {
+    "crop": "Groundnut",
+    "market": "Rajkot",
+    "date": "2026-01-07",
+    "price": 5364
+  },
+  {
+    "crop": "Groundnut",
+    "market": "Rajkot",
+    "date": "2026-01-08",
+    "price": 5346
+  },
+  {
+    "crop": "Groundnut",
+    "market": "Rajkot",
+    "date": "2026-01-09",
+    "price": 5307
+  },
+  {
+    "crop": "Groundnut",
+    "market": "Rajkot",
+    "date": "2026-01-10",
+    "price": 5270
+  },
+  {
+    "crop": "Groundnut",
+    "market": "Rajkot",
+    "date": "2026-01-11",
+    "price": 5258
+  },
+  {
+    "crop": "Groundnut",
+    "market": "Rajkot",
+    "date": "2026-01-12",
+    "price": 5293
+  },
+  {
+    "crop": "Groundnut",
+    "market": "Rajkot",
+    "date": "2026-01-13",
+    "price": 5255
+  },
+  {
+    "crop": "Groundnut",
+    "market": "Rajkot",
+    "date": "2026-01-14",
+    "price": 5244
+  },
+  {
+    "crop": "Groundnut",
+    "market": "Rajkot",
+    "date": "2026-01-15",
+    "price": 5234
+  },
+  {
+    "crop": "Groundnut",
+    "market": "Rajkot",
+    "date": "2026-01-16",
+    "price": 5201
+  },
+  {
+    "crop": "Groundnut",
+    "market": "Rajkot",
+    "date": "2026-01-17",
+    "price": 5197
+  },
+  {
+    "crop": "Groundnut",
+    "market": "Rajkot",
+    "date": "2026-01-18",
+    "price": 5235
+  },
+  {
+    "crop": "Groundnut",
+    "market": "Rajkot",
+    "date": "2026-01-19",
+    "price": 5251
+  },
+  {
+    "crop": "Groundnut",
+    "market": "Rajkot",
+    "date": "2026-01-20",
+    "price": 5262
+  },
+  {
+    "crop": "Groundnut",
+    "market": "Rajkot",
+    "date": "2026-01-21",
+    "price": 5255
+  },
+  {
+    "crop": "Groundnut",
+    "market": "Rajkot",
+    "date": "2026-01-22",
+    "price": 5231
+  },
+  {
+    "crop": "Groundnut",
+    "market": "Rajkot",
+    "date": "2026-01-23",
+    "price": 5255
+  },
+  {
+    "crop": "Groundnut",
+    "market": "Rajkot",
+    "date": "2026-01-24",
+    "price": 5216
+  },
+  {
+    "crop": "Groundnut",
+    "market": "Rajkot",
+    "date": "2026-01-25",
+    "price": 5211
+  },
+  {
+    "crop": "Groundnut",
+    "market": "Rajkot",
+    "date": "2026-01-26",
+    "price": 5225
+  },
+  {
+    "crop": "Groundnut",
+    "market": "Rajkot",
+    "date": "2026-01-27",
+    "price": 5239
+  },
+  {
+    "crop": "Groundnut",
+    "market": "Rajkot",
+    "date": "2026-01-28",
+    "price": 5277
+  },
+  {
+    "crop": "Groundnut",
+    "market": "Rajkot",
+    "date": "2026-01-29",
+    "price": 5269
+  },
+  {
+    "crop": "Groundnut",
+    "market": "Rajkot",
+    "date": "2026-01-30",
+    "price": 5231
+  },
+  {
+    "crop": "Groundnut",
+    "market": "Rajkot",
+    "date": "2026-01-31",
+    "price": 5247
+  },
+  {
+    "crop": "Groundnut",
+    "market": "Rajkot",
+    "date": "2026-02-01",
+    "price": 5275
+  },
+  {
+    "crop": "Groundnut",
+    "market": "Anantapur",
+    "date": "2026-01-03",
+    "price": 5377
+  },
+  {
+    "crop": "Groundnut",
+    "market": "Anantapur",
+    "date": "2026-01-04",
+    "price": 5403
+  },
+  {
+    "crop": "Groundnut",
+    "market": "Anantapur",
+    "date": "2026-01-05",
+    "price": 5369
+  },
+  {
+    "crop": "Groundnut",
+    "market": "Anantapur",
+    "date": "2026-01-06",
+    "price": 5371
+  },
+  {
+    "crop": "Groundnut",
+    "market": "Anantapur",
+    "date": "2026-01-07",
+    "price": 5366
+  },
+  {
+    "crop": "Groundnut",
+    "market": "Anantapur",
+    "date": "2026-01-08",
+    "price": 5366
+  },
+  {
+    "crop": "Groundnut",
+    "market": "Anantapur",
+    "date": "2026-01-09",
+    "price": 5339
+  },
+  {
+    "crop": "Groundnut",
+    "market": "Anantapur",
+    "date": "2026-01-10",
+    "price": 5354
+  },
+  {
+    "crop": "Groundnut",
+    "market": "Anantapur",
+    "date": "2026-01-11",
+    "price": 5347
+  },
+  {
+    "crop": "Groundnut",
+    "market": "Anantapur",
+    "date": "2026-01-12",
+    "price": 5340
+  },
+  {
+    "crop": "Groundnut",
+    "market": "Anantapur",
+    "date": "2026-01-13",
+    "price": 5345
+  },
+  {
+    "crop": "Groundnut",
+    "market": "Anantapur",
+    "date": "2026-01-14",
+    "price": 5308
+  },
+  {
+    "crop": "Groundnut",
+    "market": "Anantapur",
+    "date": "2026-01-15",
+    "price": 5322
+  },
+  {
+    "crop": "Groundnut",
+    "market": "Anantapur",
+    "date": "2026-01-16",
+    "price": 5322
+  },
+  {
+    "crop": "Groundnut",
+    "market": "Anantapur",
+    "date": "2026-01-17",
+    "price": 5319
+  },
+  {
+    "crop": "Groundnut",
+    "market": "Anantapur",
+    "date": "2026-01-18",
+    "price": 5303
+  },
+  {
+    "crop": "Groundnut",
+    "market": "Anantapur",
+    "date": "2026-01-19",
+    "price": 5299
+  },
+  {
+    "crop": "Groundnut",
+    "market": "Anantapur",
+    "date": "2026-01-20",
+    "price": 5332
+  },
+  {
+    "crop": "Groundnut",
+    "market": "Anantapur",
+    "date": "2026-01-21",
+    "price": 5363
+  },
+  {
+    "crop": "Groundnut",
+    "market": "Anantapur",
+    "date": "2026-01-22",
+    "price": 5392
+  },
+  {
+    "crop": "Groundnut",
+    "market": "Anantapur",
+    "date": "2026-01-23",
+    "price": 5366
+  },
+  {
+    "crop": "Groundnut",
+    "market": "Anantapur",
+    "date": "2026-01-24",
+    "price": 5372
+  },
+  {
+    "crop": "Groundnut",
+    "market": "Anantapur",
+    "date": "2026-01-25",
+    "price": 5362
+  },
+  {
+    "crop": "Groundnut",
+    "market": "Anantapur",
+    "date": "2026-01-26",
+    "price": 5369
+  },
+  {
+    "crop": "Groundnut",
+    "market": "Anantapur",
+    "date": "2026-01-27",
+    "price": 5406
+  },
+  {
+    "crop": "Groundnut",
+    "market": "Anantapur",
+    "date": "2026-01-28",
+    "price": 5400
+  },
+  {
+    "crop": "Groundnut",
+    "market": "Anantapur",
+    "date": "2026-01-29",
+    "price": 5374
+  },
+  {
+    "crop": "Groundnut",
+    "market": "Anantapur",
+    "date": "2026-01-30",
+    "price": 5350
+  },
+  {
+    "crop": "Groundnut",
+    "market": "Anantapur",
+    "date": "2026-01-31",
+    "price": 5341
+  },
+  {
+    "crop": "Groundnut",
+    "market": "Anantapur",
+    "date": "2026-02-01",
+    "price": 5371
+  },
+  {
+    "crop": "Sugarcane",
+    "market": "Kolhapur",
+    "date": "2026-01-03",
+    "price": 283
+  },
+  {
+    "crop": "Sugarcane",
+    "market": "Kolhapur",
+    "date": "2026-01-04",
+    "price": 281
+  },
+  {
+    "crop": "Sugarcane",
+    "market": "Kolhapur",
+    "date": "2026-01-05",
+    "price": 251
+  },
+  {
+    "crop": "Sugarcane",
+    "market": "Kolhapur",
+    "date": "2026-01-06",
+    "price": 268
+  },
+  {
+    "crop": "Sugarcane",
+    "market": "Kolhapur",
+    "date": "2026-01-07",
+    "price": 235
+  },
+  {
+    "crop": "Sugarcane",
+    "market": "Kolhapur",
+    "date": "2026-01-08",
+    "price": 199
+  },
+  {
+    "crop": "Sugarcane",
+    "market": "Kolhapur",
+    "date": "2026-01-09",
+    "price": 198
+  },
+  {
+    "crop": "Sugarcane",
+    "market": "Kolhapur",
+    "date": "2026-01-10",
+    "price": 174
+  },
+  {
+    "crop": "Sugarcane",
+    "market": "Kolhapur",
+    "date": "2026-01-11",
+    "price": 203
+  },
+  {
+    "crop": "Sugarcane",
+    "market": "Kolhapur",
+    "date": "2026-01-12",
+    "price": 216
+  },
+  {
+    "crop": "Sugarcane",
+    "market": "Kolhapur",
+    "date": "2026-01-13",
+    "price": 244
+  },
+  {
+    "crop": "Sugarcane",
+    "market": "Kolhapur",
+    "date": "2026-01-14",
+    "price": 250
+  },
+  {
+    "crop": "Sugarcane",
+    "market": "Kolhapur",
+    "date": "2026-01-15",
+    "price": 217
+  },
+  {
+    "crop": "Sugarcane",
+    "market": "Kolhapur",
+    "date": "2026-01-16",
+    "price": 211
+  },
+  {
+    "crop": "Sugarcane",
+    "market": "Kolhapur",
+    "date": "2026-01-17",
+    "price": 195
+  },
+  {
+    "crop": "Sugarcane",
+    "market": "Kolhapur",
+    "date": "2026-01-18",
+    "price": 174
+  },
+  {
+    "crop": "Sugarcane",
+    "market": "Kolhapur",
+    "date": "2026-01-19",
+    "price": 159
+  },
+  {
+    "crop": "Sugarcane",
+    "market": "Kolhapur",
+    "date": "2026-01-20",
+    "price": 179
+  },
+  {
+    "crop": "Sugarcane",
+    "market": "Kolhapur",
+    "date": "2026-01-21",
+    "price": 187
+  },
+  {
+    "crop": "Sugarcane",
+    "market": "Kolhapur",
+    "date": "2026-01-22",
+    "price": 209
+  },
+  {
+    "crop": "Sugarcane",
+    "market": "Kolhapur",
+    "date": "2026-01-23",
+    "price": 173
+  },
+  {
+    "crop": "Sugarcane",
+    "market": "Kolhapur",
+    "date": "2026-01-24",
+    "price": 174
+  },
+  {
+    "crop": "Sugarcane",
+    "market": "Kolhapur",
+    "date": "2026-01-25",
+    "price": 165
+  },
+  {
+    "crop": "Sugarcane",
+    "market": "Kolhapur",
+    "date": "2026-01-26",
+    "price": 140
+  },
+  {
+    "crop": "Sugarcane",
+    "market": "Kolhapur",
+    "date": "2026-01-27",
+    "price": 142
+  },
+  {
+    "crop": "Sugarcane",
+    "market": "Kolhapur",
+    "date": "2026-01-28",
+    "price": 181
+  },
+  {
+    "crop": "Sugarcane",
+    "market": "Kolhapur",
+    "date": "2026-01-29",
+    "price": 193
+  },
+  {
+    "crop": "Sugarcane",
+    "market": "Kolhapur",
+    "date": "2026-01-30",
+    "price": 229
+  },
+  {
+    "crop": "Sugarcane",
+    "market": "Kolhapur",
+    "date": "2026-01-31",
+    "price": 189
+  },
+  {
+    "crop": "Sugarcane",
+    "market": "Kolhapur",
+    "date": "2026-02-01",
+    "price": 215
+  },
+  {
+    "crop": "Sugarcane",
+    "market": "Muzaffarnagar",
+    "date": "2026-01-03",
+    "price": 284
+  },
+  {
+    "crop": "Sugarcane",
+    "market": "Muzaffarnagar",
+    "date": "2026-01-04",
+    "price": 277
+  },
+  {
+    "crop": "Sugarcane",
+    "market": "Muzaffarnagar",
+    "date": "2026-01-05",
+    "price": 280
+  },
+  {
+    "crop": "Sugarcane",
+    "market": "Muzaffarnagar",
+    "date": "2026-01-06",
+    "price": 285
+  },
+  {
+    "crop": "Sugarcane",
+    "market": "Muzaffarnagar",
+    "date": "2026-01-07",
+    "price": 323
+  },
+  {
+    "crop": "Sugarcane",
+    "market": "Muzaffarnagar",
+    "date": "2026-01-08",
+    "price": 299
+  },
+  {
+    "crop": "Sugarcane",
+    "market": "Muzaffarnagar",
+    "date": "2026-01-09",
+    "price": 269
+  },
+  {
+    "crop": "Sugarcane",
+    "market": "Muzaffarnagar",
+    "date": "2026-01-10",
+    "price": 305
+  },
+  {
+    "crop": "Sugarcane",
+    "market": "Muzaffarnagar",
+    "date": "2026-01-11",
+    "price": 265
+  },
+  {
+    "crop": "Sugarcane",
+    "market": "Muzaffarnagar",
+    "date": "2026-01-12",
+    "price": 269
+  },
+  {
+    "crop": "Sugarcane",
+    "market": "Muzaffarnagar",
+    "date": "2026-01-13",
+    "price": 304
+  },
+  {
+    "crop": "Sugarcane",
+    "market": "Muzaffarnagar",
+    "date": "2026-01-14",
+    "price": 327
+  },
+  {
+    "crop": "Sugarcane",
+    "market": "Muzaffarnagar",
+    "date": "2026-01-15",
+    "price": 340
+  },
+  {
+    "crop": "Sugarcane",
+    "market": "Muzaffarnagar",
+    "date": "2026-01-16",
+    "price": 341
+  },
+  {
+    "crop": "Sugarcane",
+    "market": "Muzaffarnagar",
+    "date": "2026-01-17",
+    "price": 305
+  },
+  {
+    "crop": "Sugarcane",
+    "market": "Muzaffarnagar",
+    "date": "2026-01-18",
+    "price": 327
+  },
+  {
+    "crop": "Sugarcane",
+    "market": "Muzaffarnagar",
+    "date": "2026-01-19",
+    "price": 330
+  },
+  {
+    "crop": "Sugarcane",
+    "market": "Muzaffarnagar",
+    "date": "2026-01-20",
+    "price": 308
+  },
+  {
+    "crop": "Sugarcane",
+    "market": "Muzaffarnagar",
+    "date": "2026-01-21",
+    "price": 314
+  },
+  {
+    "crop": "Sugarcane",
+    "market": "Muzaffarnagar",
+    "date": "2026-01-22",
+    "price": 341
+  },
+  {
+    "crop": "Sugarcane",
+    "market": "Muzaffarnagar",
+    "date": "2026-01-23",
+    "price": 305
+  },
+  {
+    "crop": "Sugarcane",
+    "market": "Muzaffarnagar",
+    "date": "2026-01-24",
+    "price": 300
+  },
+  {
+    "crop": "Sugarcane",
+    "market": "Muzaffarnagar",
+    "date": "2026-01-25",
+    "price": 267
+  },
+  {
+    "crop": "Sugarcane",
+    "market": "Muzaffarnagar",
+    "date": "2026-01-26",
+    "price": 263
+  },
+  {
+    "crop": "Sugarcane",
+    "market": "Muzaffarnagar",
+    "date": "2026-01-27",
+    "price": 289
+  },
+  {
+    "crop": "Sugarcane",
+    "market": "Muzaffarnagar",
+    "date": "2026-01-28",
+    "price": 285
+  },
+  {
+    "crop": "Sugarcane",
+    "market": "Muzaffarnagar",
+    "date": "2026-01-29",
+    "price": 277
+  },
+  {
+    "crop": "Sugarcane",
+    "market": "Muzaffarnagar",
+    "date": "2026-01-30",
+    "price": 287
+  },
+  {
+    "crop": "Sugarcane",
+    "market": "Muzaffarnagar",
+    "date": "2026-01-31",
+    "price": 286
+  },
+  {
+    "crop": "Sugarcane",
+    "market": "Muzaffarnagar",
+    "date": "2026-02-01",
+    "price": 290
+  },
+  {
+    "crop": "Chilli",
+    "market": "Guntur",
+    "date": "2026-01-03",
+    "price": 9020
+  },
+  {
+    "crop": "Chilli",
+    "market": "Guntur",
+    "date": "2026-01-04",
+    "price": 9006
+  },
+  {
+    "crop": "Chilli",
+    "market": "Guntur",
+    "date": "2026-01-05",
+    "price": 8988
+  },
+  {
+    "crop": "Chilli",
+    "market": "Guntur",
+    "date": "2026-01-06",
+    "price": 9025
+  },
+  {
+    "crop": "Chilli",
+    "market": "Guntur",
+    "date": "2026-01-07",
+    "price": 9013
+  },
+  {
+    "crop": "Chilli",
+    "market": "Guntur",
+    "date": "2026-01-08",
+    "price": 9049
+  },
+  {
+    "crop": "Chilli",
+    "market": "Guntur",
+    "date": "2026-01-09",
+    "price": 9028
+  },
+  {
+    "crop": "Chilli",
+    "market": "Guntur",
+    "date": "2026-01-10",
+    "price": 9009
+  },
+  {
+    "crop": "Chilli",
+    "market": "Guntur",
+    "date": "2026-01-11",
+    "price": 8995
+  },
+  {
+    "crop": "Chilli",
+    "market": "Guntur",
+    "date": "2026-01-12",
+    "price": 9019
+  },
+  {
+    "crop": "Chilli",
+    "market": "Guntur",
+    "date": "2026-01-13",
+    "price": 9019
+  },
+  {
+    "crop": "Chilli",
+    "market": "Guntur",
+    "date": "2026-01-14",
+    "price": 9018
+  },
+  {
+    "crop": "Chilli",
+    "market": "Guntur",
+    "date": "2026-01-15",
+    "price": 9020
+  },
+  {
+    "crop": "Chilli",
+    "market": "Guntur",
+    "date": "2026-01-16",
+    "price": 9046
+  },
+  {
+    "crop": "Chilli",
+    "market": "Guntur",
+    "date": "2026-01-17",
+    "price": 9080
+  },
+  {
+    "crop": "Chilli",
+    "market": "Guntur",
+    "date": "2026-01-18",
+    "price": 9069
+  },
+  {
+    "crop": "Chilli",
+    "market": "Guntur",
+    "date": "2026-01-19",
+    "price": 9096
+  },
+  {
+    "crop": "Chilli",
+    "market": "Guntur",
+    "date": "2026-01-20",
+    "price": 9067
+  },
+  {
+    "crop": "Chilli",
+    "market": "Guntur",
+    "date": "2026-01-21",
+    "price": 9030
+  },
+  {
+    "crop": "Chilli",
+    "market": "Guntur",
+    "date": "2026-01-22",
+    "price": 8995
+  },
+  {
+    "crop": "Chilli",
+    "market": "Guntur",
+    "date": "2026-01-23",
+    "price": 8998
+  },
+  {
+    "crop": "Chilli",
+    "market": "Guntur",
+    "date": "2026-01-24",
+    "price": 9023
+  },
+  {
+    "crop": "Chilli",
+    "market": "Guntur",
+    "date": "2026-01-25",
+    "price": 9045
+  },
+  {
+    "crop": "Chilli",
+    "market": "Guntur",
+    "date": "2026-01-26",
+    "price": 9022
+  },
+  {
+    "crop": "Chilli",
+    "market": "Guntur",
+    "date": "2026-01-27",
+    "price": 8990
+  },
+  {
+    "crop": "Chilli",
+    "market": "Guntur",
+    "date": "2026-01-28",
+    "price": 8985
+  },
+  {
+    "crop": "Chilli",
+    "market": "Guntur",
+    "date": "2026-01-29",
+    "price": 9014
+  },
+  {
+    "crop": "Chilli",
+    "market": "Guntur",
+    "date": "2026-01-30",
+    "price": 9035
+  },
+  {
+    "crop": "Chilli",
+    "market": "Guntur",
+    "date": "2026-01-31",
+    "price": 9016
+  },
+  {
+    "crop": "Chilli",
+    "market": "Guntur",
+    "date": "2026-02-01",
+    "price": 9045
+  },
+  {
+    "crop": "Chilli",
+    "market": "Warangal",
+    "date": "2026-01-03",
+    "price": 9023
+  },
+  {
+    "crop": "Chilli",
+    "market": "Warangal",
+    "date": "2026-01-04",
+    "price": 8990
+  },
+  {
+    "crop": "Chilli",
+    "market": "Warangal",
+    "date": "2026-01-05",
+    "price": 8961
+  },
+  {
+    "crop": "Chilli",
+    "market": "Warangal",
+    "date": "2026-01-06",
+    "price": 8937
+  },
+  {
+    "crop": "Chilli",
+    "market": "Warangal",
+    "date": "2026-01-07",
+    "price": 8975
+  },
+  {
+    "crop": "Chilli",
+    "market": "Warangal",
+    "date": "2026-01-08",
+    "price": 9003
+  },
+  {
+    "crop": "Chilli",
+    "market": "Warangal",
+    "date": "2026-01-09",
+    "price": 8971
+  },
+  {
+    "crop": "Chilli",
+    "market": "Warangal",
+    "date": "2026-01-10",
+    "price": 8972
+  },
+  {
+    "crop": "Chilli",
+    "market": "Warangal",
+    "date": "2026-01-11",
+    "price": 8969
+  },
+  {
+    "crop": "Chilli",
+    "market": "Warangal",
+    "date": "2026-01-12",
+    "price": 8951
+  },
+  {
+    "crop": "Chilli",
+    "market": "Warangal",
+    "date": "2026-01-13",
+    "price": 8924
+  },
+  {
+    "crop": "Chilli",
+    "market": "Warangal",
+    "date": "2026-01-14",
+    "price": 8905
+  },
+  {
+    "crop": "Chilli",
+    "market": "Warangal",
+    "date": "2026-01-15",
+    "price": 8890
+  },
+  {
+    "crop": "Chilli",
+    "market": "Warangal",
+    "date": "2026-01-16",
+    "price": 8919
+  },
+  {
+    "crop": "Chilli",
+    "market": "Warangal",
+    "date": "2026-01-17",
+    "price": 8894
+  },
+  {
+    "crop": "Chilli",
+    "market": "Warangal",
+    "date": "2026-01-18",
+    "price": 8861
+  },
+  {
+    "crop": "Chilli",
+    "market": "Warangal",
+    "date": "2026-01-19",
+    "price": 8879
+  },
+  {
+    "crop": "Chilli",
+    "market": "Warangal",
+    "date": "2026-01-20",
+    "price": 8894
+  },
+  {
+    "crop": "Chilli",
+    "market": "Warangal",
+    "date": "2026-01-21",
+    "price": 8927
+  },
+  {
+    "crop": "Chilli",
+    "market": "Warangal",
+    "date": "2026-01-22",
+    "price": 8903
+  },
+  {
+    "crop": "Chilli",
+    "market": "Warangal",
+    "date": "2026-01-23",
+    "price": 8919
+  },
+  {
+    "crop": "Chilli",
+    "market": "Warangal",
+    "date": "2026-01-24",
+    "price": 8883
+  },
+  {
+    "crop": "Chilli",
+    "market": "Warangal",
+    "date": "2026-01-25",
+    "price": 8843
+  },
+  {
+    "crop": "Chilli",
+    "market": "Warangal",
+    "date": "2026-01-26",
+    "price": 8817
+  },
+  {
+    "crop": "Chilli",
+    "market": "Warangal",
+    "date": "2026-01-27",
+    "price": 8822
+  },
+  {
+    "crop": "Chilli",
+    "market": "Warangal",
+    "date": "2026-01-28",
+    "price": 8821
+  },
+  {
+    "crop": "Chilli",
+    "market": "Warangal",
+    "date": "2026-01-29",
+    "price": 8803
+  },
+  {
+    "crop": "Chilli",
+    "market": "Warangal",
+    "date": "2026-01-30",
+    "price": 8789
+  },
+  {
+    "crop": "Chilli",
+    "market": "Warangal",
+    "date": "2026-01-31",
+    "price": 8813
+  },
+  {
+    "crop": "Chilli",
+    "market": "Warangal",
+    "date": "2026-02-01",
+    "price": 8799
+  }
+]

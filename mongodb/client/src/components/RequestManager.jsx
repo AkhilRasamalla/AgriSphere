@@ -1,78 +1,124 @@
-import React, { useEffect, useState } from 'react';
-import './RequestManager.css'; // Import a CSS file for styling
-import { useAuth } from '../context/AuthContext'; // Import the useAuth hook
+import React, { useEffect, useState } from "react";
+import "./RequestManager.css";
+import { useAuth } from "../context/AuthContext";
 
 const RequestManager = () => {
-  const { user } = useAuth(); // Access the user from AuthContext
+  const { user } = useAuth();
   const [requests, setRequests] = useState([]);
   const [error, setError] = useState(null);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    if (!user || !user.email) return;
+
     const fetchRequests = async () => {
       try {
-        const response = await fetch(`http://localhost:3000/api/requests/owner/${user.email}`);
-        if (!response.ok) {
-          throw new Error('Failed to fetch requests');
-        }
-        const data = await response.json();
-        console.log('Fetched Requests:', data); // Log the fetched requests
+        const res = await fetch(
+          `http://localhost:5000/api/requests/owner/${user.email}`
+        );
+
+        if (!res.ok) throw new Error("Failed to fetch requests");
+
+        const data = await res.json();
         setRequests(data);
+        setLoading(false);
       } catch (err) {
-        console.error('Error fetching requests:', err);
         setError(err.message);
+        setLoading(false);
       }
     };
 
     fetchRequests();
-  }, [user.email]); // Only depend on user.email
+  }, [user]);
 
-  const handleUpdate = async (requestId, status) => {
+  const updateStatus = async (id, status) => {
     try {
-      const response = await fetch(`http://localhost:3000/api/requests/update/${requestId}`, {
-        method: 'PUT',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ status }),
-      });
+      const res = await fetch(
+        `http://localhost:5000/api/requests/update/${id}`,
+        {
+          method: "PUT",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ status }),
+        }
+      );
 
-      if (!response.ok) {
-        throw new Error('Failed to update request');
-      }
+      if (!res.ok) throw new Error("Update failed");
 
-      const data = await response.json();
-      console.log('Update Response:', data);
-      // Optionally refresh the request list after the update
-      // fetchRequests(); // Uncomment if you want to refresh the requests after an update
-    } catch (error) {
-      console.error('Error updating request:', error);
-      setError(error.message); // Set error state if update fails
+      setRequests((prev) =>
+        prev.map((r) => (r._id === id ? { ...r, status } : r))
+      );
+    } catch (err) {
+      alert(err.message);
     }
   };
 
-  return (
-    <div className="request-manager-container">
-      <h2 className="header">Manage Requests</h2>
-      {error && <p className="error">{error}</p>}
-      {requests.length === 0 && <p>No requests found for your seeds.</p>}
+  if (!user) {
+    return (
+      <p style={{ textAlign: "center" }}>
+        Please login to manage requests
+      </p>
+    );
+  }
 
-      <h3>Requests</h3>
-      {requests.length === 0 ? (
-        <p>No Requests found.</p>
-      ) : (
-        <ul className="request-list">
-          {requests.map((request) => (
-            <li className="request-item" key={request._id}>
-              <p><strong>Request ID:</strong> {request.requestId}</p>
-              <p><strong>Requester ID:</strong> {request.requesterId}</p>
-              <p><strong>Requester Email:</strong> {request.requesterEmail}</p>
-              <p><strong>Status:</strong> {request.status}</p>
-              <div className="button-group">
-                <button className="grant-button" onClick={() => handleUpdate(request._id, 'Granted')}>Grant</button>
-                <button className="decline-button" onClick={() => handleUpdate(request._id, 'Declined')}>Decline</button>
+  if (loading) {
+    return (
+      <p style={{ textAlign: "center" }}>
+        Loading requests...
+      </p>
+    );
+  }
+
+  return (
+    <div className="page">
+      <div className="request-manager-container">
+        <h2>Manage Requests</h2>
+
+        {error && <p className="error">{error}</p>}
+
+        {requests.length === 0 ? (
+          <p style={{ textAlign: "center", color: "var(--muted)" }}>
+            No requests found.
+          </p>
+        ) : (
+          <div className="request-list">
+            {requests.map((request) => (
+              <div className="request-card" key={request._id}>
+                <p>
+                  <strong>Requester:</strong> {request.requesterEmail}
+                </p>
+                <p>
+                  <strong>Status:</strong> {request.status}
+                </p>
+                <p>
+                  <strong>Seed:</strong>{" "}
+                  {request.seedId?.seedName || "N/A"}
+                </p>
+
+                {request.status === "pending" && (
+                  <div className="button-group">
+                    <button
+                      className="grant-button"
+                      onClick={() =>
+                        updateStatus(request._id, "granted")
+                      }
+                    >
+                      Grant
+                    </button>
+                    <button
+                      className="decline-button"
+                      onClick={() =>
+                        updateStatus(request._id, "declined")
+                      }
+                    >
+                      Decline
+                    </button>
+                  </div>
+                )}
               </div>
-            </li>
-          ))}
-        </ul>
-      )}
+            ))}
+          </div>
+        )}
+      </div>
     </div>
   );
 };
