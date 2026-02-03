@@ -1,5 +1,5 @@
 // =====================
-// Load environment variables FIRST
+// Load env FIRST
 // =====================
 require("dotenv").config();
 
@@ -25,65 +25,23 @@ const app = express();
 // =====================
 app.use(bodyParser.json());
 
-// ✅ FIXED CORS (works for Render + local)
 app.use(
   cors({
-    origin: true,
-    credentials: true,
+    origin: "*",
     methods: ["GET", "POST", "PUT", "DELETE"],
   })
 );
 
 // =====================
-// MongoDB Connection (FORCE OLD DATABASE)
+// MongoDB
 // =====================
 mongoose
-  .connect(process.env.MONGO_URI, {
-    dbName: "test", // 🔴 THIS IS YOUR OLD DATABASE
-  })
+  .connect(process.env.MONGO_URI)
   .then(() => console.log("MongoDB connected successfully"))
   .catch((err) => console.error("MongoDB connection error:", err));
 
 // =====================
-// Weather API (OPTIONAL – SAFE)
-// =====================
-app.post("/api/weather", async (req, res) => {
-  const { zipCode, tempMetric } = req.body;
-
-  if (!zipCode || !tempMetric) {
-    return res.status(400).json({ error: "zipCode and tempMetric required" });
-  }
-
-  try {
-    const geoURL = `https://api.opencagedata.com/geocode/v1/json?q=${zipCode}&key=${process.env.OPENCAGE_API_KEY}`;
-    const geoRes = await axios.get(geoURL);
-
-    if (!geoRes.data.results.length) {
-      return res.status(404).json({ error: "Invalid zip code" });
-    }
-
-    const { lat, lng } = geoRes.data.results[0].geometry;
-
-    const weatherURL = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lng}&units=${tempMetric}&appid=${process.env.WEATHER_KEY}`;
-    const weatherRes = await axios.get(weatherURL);
-
-    res.json({
-      city: weatherRes.data.name,
-      temperature: weatherRes.data.main.temp,
-      humidity: weatherRes.data.main.humidity,
-      description: weatherRes.data.weather[0].description,
-      unit: tempMetric === "metric" ? "°C" : "°F",
-    });
-  } catch (error) {
-    res.status(500).json({
-      message: "Failed to fetch weather data",
-      error: error.message,
-    });
-  }
-});
-
-// =====================
-// Routes
+// API ROUTES (IMPORTANT: BEFORE frontend)
 // =====================
 app.use("/api/users", userRoutes);
 app.use("/api/crops", cropRoutes);
@@ -94,17 +52,58 @@ app.use("/api/requests", requestRoutes);
 app.use("/api/prices", priceRoutes);
 
 // =====================
-// Serve React (Production)
+// WEATHER API
+// =====================
+app.post("/api/weather", async (req, res) => {
+  const { zipCode, tempMetric } = req.body;
+
+  if (!zipCode || !tempMetric) {
+    return res.status(400).json({ error: "zipCode and tempMetric required" });
+  }
+
+  try {
+    // Zip → Lat/Lng
+    const geoURL = `https://api.opencagedata.com/geocode/v1/json?q=${zipCode}&key=${process.env.OPENCAGE_API_KEY}`;
+    const geoRes = await axios.get(geoURL);
+
+    if (!geoRes.data.results.length) {
+      return res.status(404).json({ error: "Invalid zip code" });
+    }
+
+    const { lat, lng } = geoRes.data.results[0].geometry;
+
+    // Weather
+    const weatherURL = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lng}&units=${tempMetric}&appid=${process.env.WEATHER_KEY}`;
+    const weatherRes = await axios.get(weatherURL);
+
+    res.json({
+      city: weatherRes.data.name,
+      temperature: weatherRes.data.main.temp,
+      humidity: weatherRes.data.main.humidity,
+      description: weatherRes.data.weather[0].description,
+      unit: tempMetric === "metric" ? "°C" : "°F",
+    });
+  } catch (err) {
+    res.status(500).json({
+      message: "Weather fetch failed",
+      error: err.message,
+    });
+  }
+});
+
+// =====================
+// FRONTEND (LAST)
 // =====================
 if (process.env.NODE_ENV === "production") {
   app.use(express.static(path.join(__dirname, "../client/build")));
+
   app.get("*", (req, res) => {
-    res.sendFile(path.join(__dirname, "../client/build", "index.html"));
+    res.sendFile(path.join(__dirname, "../client/build/index.html"));
   });
 }
 
 // =====================
-// Server Start
+// START SERVER
 // =====================
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
