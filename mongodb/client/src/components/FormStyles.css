@@ -85,3 +85,29 @@ label {
       padding: 10px;
   }
 }
+.popup-error {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #b00020;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 8px;
+  z-index: 1000;
+  font-weight: 500;
+}
+
+.popup-success {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #1b8f3a;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 8px;
+  z-index: 1000;
+  font-weight: 500;
+}
+
