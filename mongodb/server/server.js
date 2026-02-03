@@ -1,4 +1,4 @@
-// Load env FIRST
+// Load environment variables FIRST
 require("dotenv").config();
 
 const express = require("express");
@@ -14,32 +14,44 @@ const userRoutes = require("./routes/userRoutes");
 const cropRoutes = require("./routes/cropRoutes");
 const seedRoutes = require("./routes/seedRoutes");
 const requestRoutes = require("./routes/requestRoutes");
+const priceRoutes = require("./routes/priceRoutes");
 
 const app = express();
 
-/* =====================
-   Middleware
-===================== */
+// =====================
+// Middleware
+// =====================
 app.use(bodyParser.json());
 
 app.use(
   cors({
-    origin: ["http://localhost:3000", "https://agrisphere.vercel.app"],
-    credentials: true,
+    origin: "*", // SIMPLE + WORKS
+    methods: ["GET", "POST", "PUT", "DELETE"],
   })
 );
 
-/* =====================
-   MongoDB
-===================== */
+// =====================
+// MongoDB Connection
+// =====================
 mongoose
   .connect(process.env.MONGO_URI)
-  .then(() => console.log("MongoDB connected"))
-  .catch((err) => console.error(err));
+  .then(() => console.log("MongoDB connected successfully"))
+  .catch((err) => console.error("MongoDB connection error:", err));
 
-/* =====================
-   WEATHER API ROUTE
-===================== */
+// =====================
+// API ROUTES (IMPORTANT: BEFORE REACT)
+// =====================
+app.use("/api/users", userRoutes);
+app.use("/api/crops", cropRoutes);
+app.use("/api/farms", farmRoutes);
+app.use("/api/purchases", purchaseRoutes);
+app.use("/api/seeds", seedRoutes);
+app.use("/api/requests", requestRoutes);
+app.use("/api/prices", priceRoutes);
+
+// =====================
+// Weather API
+// =====================
 app.post("/api/weather", async (req, res) => {
   const { zipCode, tempMetric } = req.body;
 
@@ -67,34 +79,29 @@ app.post("/api/weather", async (req, res) => {
       description: weatherRes.data.weather[0].description,
       unit: tempMetric === "metric" ? "°C" : "°F",
     });
-  } catch (err) {
-    res.status(500).json({ error: err.message });
+  } catch (error) {
+    res.status(500).json({
+      message: "Failed to fetch weather data",
+      error: error.message,
+    });
   }
 });
 
-/* =====================
-   API ROUTES
-===================== */
-app.use("/api/users", userRoutes);
-app.use("/api/crops", cropRoutes);
-app.use("/api/farms", farmRoutes);
-app.use("/api/purchases", purchaseRoutes);
-app.use("/api/seeds", seedRoutes);
-app.use("/api/requests", requestRoutes);
-app.use("/api/prices", require("./routes/priceRoutes"));
-
-/* =====================
-   FRONTEND (LAST!)
-===================== */
+// =====================
+// React Frontend (LAST)
+// =====================
 if (process.env.NODE_ENV === "production") {
   app.use(express.static(path.join(__dirname, "../client/build")));
+
   app.get("*", (req, res) => {
-    res.sendFile(path.join(__dirname, "../client/build/index.html"));
+    res.sendFile(path.join(__dirname, "../client/build", "index.html"));
   });
 }
 
-/* =====================
-   START SERVER
-===================== */
+// =====================
+// Server Start
+// =====================
 const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => console.log(`Server running on ${PORT}`));
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
+});
