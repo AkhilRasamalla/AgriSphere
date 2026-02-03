@@ -1,4 +1,6 @@
+// =====================
 // Load environment variables FIRST
+// =====================
 require("dotenv").config();
 
 const express = require("express");
@@ -14,6 +16,7 @@ const userRoutes = require("./routes/userRoutes");
 const cropRoutes = require("./routes/cropRoutes");
 const seedRoutes = require("./routes/seedRoutes");
 const requestRoutes = require("./routes/requestRoutes");
+const priceRoutes = require("./routes/priceRoutes");
 
 const app = express();
 
@@ -22,24 +25,27 @@ const app = express();
 // =====================
 app.use(bodyParser.json());
 
+// ✅ FIXED CORS (works for Render + local)
 app.use(
   cors({
-    origin: ["http://localhost:3000", "http://localhost:5001"],
-    methods: ["GET", "POST", "PUT", "DELETE"],
+    origin: true,
     credentials: true,
+    methods: ["GET", "POST", "PUT", "DELETE"],
   })
 );
 
 // =====================
-// MongoDB Connection
+// MongoDB Connection (FORCE OLD DATABASE)
 // =====================
 mongoose
-  .connect(process.env.MONGO_URI)
+  .connect(process.env.MONGO_URI, {
+    dbName: "test", // 🔴 THIS IS YOUR OLD DATABASE
+  })
   .then(() => console.log("MongoDB connected successfully"))
   .catch((err) => console.error("MongoDB connection error:", err));
 
 // =====================
-// Weather API (FINAL + CORRECT)
+// Weather API (OPTIONAL – SAFE)
 // =====================
 app.post("/api/weather", async (req, res) => {
   const { zipCode, tempMetric } = req.body;
@@ -49,7 +55,6 @@ app.post("/api/weather", async (req, res) => {
   }
 
   try {
-    // 1️⃣ Zip → Latitude / Longitude
     const geoURL = `https://api.opencagedata.com/geocode/v1/json?q=${zipCode}&key=${process.env.OPENCAGE_API_KEY}`;
     const geoRes = await axios.get(geoURL);
 
@@ -59,11 +64,9 @@ app.post("/api/weather", async (req, res) => {
 
     const { lat, lng } = geoRes.data.results[0].geometry;
 
-    // 2️⃣ Weather (metric OR imperial)
     const weatherURL = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lng}&units=${tempMetric}&appid=${process.env.WEATHER_KEY}`;
     const weatherRes = await axios.get(weatherURL);
 
-    // 3️⃣ Clean response
     res.json({
       city: weatherRes.data.name,
       temperature: weatherRes.data.main.temp,
@@ -88,11 +91,10 @@ app.use("/api/farms", farmRoutes);
 app.use("/api/purchases", purchaseRoutes);
 app.use("/api/seeds", seedRoutes);
 app.use("/api/requests", requestRoutes);
-app.use("/api/prices", require("./routes/priceRoutes"));
-
+app.use("/api/prices", priceRoutes);
 
 // =====================
-// Production Build
+// Serve React (Production)
 // =====================
 if (process.env.NODE_ENV === "production") {
   app.use(express.static(path.join(__dirname, "../client/build")));
@@ -106,5 +108,5 @@ if (process.env.NODE_ENV === "production") {
 // =====================
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
-  console.log(`Server running on http://localhost:${PORT}`);
+  console.log(`Server running on port ${PORT}`);
 });
