@@ -1,6 +1,4 @@
-// =====================
 // Load env FIRST
-// =====================
 require("dotenv").config();
 
 const express = require("express");
@@ -16,44 +14,32 @@ const userRoutes = require("./routes/userRoutes");
 const cropRoutes = require("./routes/cropRoutes");
 const seedRoutes = require("./routes/seedRoutes");
 const requestRoutes = require("./routes/requestRoutes");
-const priceRoutes = require("./routes/priceRoutes");
 
 const app = express();
 
-// =====================
-// Middleware
-// =====================
+/* =====================
+   Middleware
+===================== */
 app.use(bodyParser.json());
 
 app.use(
   cors({
-    origin: "*",
-    methods: ["GET", "POST", "PUT", "DELETE"],
+    origin: ["http://localhost:3000", "https://agrisphere.vercel.app"],
+    credentials: true,
   })
 );
 
-// =====================
-// MongoDB
-// =====================
+/* =====================
+   MongoDB
+===================== */
 mongoose
   .connect(process.env.MONGO_URI)
-  .then(() => console.log("MongoDB connected successfully"))
-  .catch((err) => console.error("MongoDB connection error:", err));
+  .then(() => console.log("MongoDB connected"))
+  .catch((err) => console.error(err));
 
-// =====================
-// API ROUTES (IMPORTANT: BEFORE frontend)
-// =====================
-app.use("/api/users", userRoutes);
-app.use("/api/crops", cropRoutes);
-app.use("/api/farms", farmRoutes);
-app.use("/api/purchases", purchaseRoutes);
-app.use("/api/seeds", seedRoutes);
-app.use("/api/requests", requestRoutes);
-app.use("/api/prices", priceRoutes);
-
-// =====================
-// WEATHER API
-// =====================
+/* =====================
+   WEATHER API ROUTE
+===================== */
 app.post("/api/weather", async (req, res) => {
   const { zipCode, tempMetric } = req.body;
 
@@ -62,7 +48,6 @@ app.post("/api/weather", async (req, res) => {
   }
 
   try {
-    // Zip → Lat/Lng
     const geoURL = `https://api.opencagedata.com/geocode/v1/json?q=${zipCode}&key=${process.env.OPENCAGE_API_KEY}`;
     const geoRes = await axios.get(geoURL);
 
@@ -72,7 +57,6 @@ app.post("/api/weather", async (req, res) => {
 
     const { lat, lng } = geoRes.data.results[0].geometry;
 
-    // Weather
     const weatherURL = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lng}&units=${tempMetric}&appid=${process.env.WEATHER_KEY}`;
     const weatherRes = await axios.get(weatherURL);
 
@@ -84,28 +68,33 @@ app.post("/api/weather", async (req, res) => {
       unit: tempMetric === "metric" ? "°C" : "°F",
     });
   } catch (err) {
-    res.status(500).json({
-      message: "Weather fetch failed",
-      error: err.message,
-    });
+    res.status(500).json({ error: err.message });
   }
 });
 
-// =====================
-// FRONTEND (LAST)
-// =====================
+/* =====================
+   API ROUTES
+===================== */
+app.use("/api/users", userRoutes);
+app.use("/api/crops", cropRoutes);
+app.use("/api/farms", farmRoutes);
+app.use("/api/purchases", purchaseRoutes);
+app.use("/api/seeds", seedRoutes);
+app.use("/api/requests", requestRoutes);
+app.use("/api/prices", require("./routes/priceRoutes"));
+
+/* =====================
+   FRONTEND (LAST!)
+===================== */
 if (process.env.NODE_ENV === "production") {
   app.use(express.static(path.join(__dirname, "../client/build")));
-
   app.get("*", (req, res) => {
     res.sendFile(path.join(__dirname, "../client/build/index.html"));
   });
 }
 
-// =====================
-// START SERVER
-// =====================
+/* =====================
+   START SERVER
+===================== */
 const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
-});
+app.listen(PORT, () => console.log(`Server running on ${PORT}`));
