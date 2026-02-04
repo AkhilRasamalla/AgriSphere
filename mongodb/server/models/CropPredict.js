@@ -1,14 +1,23 @@
-const CropPredict = require("../models/CropPredict");
+const mongoose = require("mongoose");
 
-await CropPredict.create({
-  user_id: req.body.user_id,   // must come from frontend
-  N,
-  P,
-  K,
-  temperature,
-  humidity,
-  ph,
-  rainfall,
-  predictedCrop: predicted_crop,
-  predictedPrice: predicted_price
-});
+const CropPredictSchema = new mongoose.Schema(
+  {
+    user_id: {
+      type: mongoose.Schema.Types.ObjectId,
+      required: true,
+      ref: "User"
+    },
+    N: Number,
+    P: Number,
+    K: Number,
+    temperature: Number,
+    humidity: Number,
+    ph: Number,
+    rainfall: Number,
+    predictedCrop: String,
+    predictedPrice: Number
+  },
+  { timestamps: true }
+);
+
+module.exports = mongoose.model("CropPredict", CropPredictSchema);
