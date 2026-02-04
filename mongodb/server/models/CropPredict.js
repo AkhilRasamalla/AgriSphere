@@ -5,7 +5,7 @@ const CropPredictSchema = new mongoose.Schema(
     user_id: {
       type: mongoose.Schema.Types.ObjectId,
       required: true,
-      ref: "User"
+      ref: "User",
     },
     N: Number,
     P: Number,
@@ -15,7 +15,7 @@ const CropPredictSchema = new mongoose.Schema(
     ph: Number,
     rainfall: Number,
     predictedCrop: String,
-    predictedPrice: Number
+    predictedPrice: Number,
   },
   { timestamps: true }
 );

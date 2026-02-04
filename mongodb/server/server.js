@@ -1,4 +1,3 @@
-// Load environment variables FIRST
 require("dotenv").config();
 
 const express = require("express");
@@ -18,29 +17,22 @@ const priceRoutes = require("./routes/priceRoutes");
 
 const app = express();
 
-// =====================
-// Middleware
-// =====================
+/* Middleware */
 app.use(bodyParser.json());
-
 app.use(
   cors({
-    origin: "*", // SIMPLE + WORKS
+    origin: "*",
     methods: ["GET", "POST", "PUT", "DELETE"],
   })
 );
 
-// =====================
-// MongoDB Connection
-// =====================
+/* MongoDB */
 mongoose
   .connect(process.env.MONGO_URI)
-  .then(() => console.log("MongoDB connected successfully"))
-  .catch((err) => console.error("MongoDB connection error:", err));
+  .then(() => console.log("MongoDB connected"))
+  .catch((err) => console.error(err));
 
-// =====================
-// API ROUTES (IMPORTANT: BEFORE REACT)
-// =====================
+/* API routes */
 app.use("/api/users", userRoutes);
 app.use("/api/crops", cropRoutes);
 app.use("/api/farms", farmRoutes);
@@ -49,23 +41,13 @@ app.use("/api/seeds", seedRoutes);
 app.use("/api/requests", requestRoutes);
 app.use("/api/prices", priceRoutes);
 
-// =====================
-// Weather API
-// =====================
+/* Weather */
 app.post("/api/weather", async (req, res) => {
-  const { zipCode, tempMetric } = req.body;
-
-  if (!zipCode || !tempMetric) {
-    return res.status(400).json({ error: "zipCode and tempMetric required" });
-  }
-
   try {
+    const { zipCode, tempMetric } = req.body;
+
     const geoURL = `https://api.opencagedata.com/geocode/v1/json?q=${zipCode}&key=${process.env.OPENCAGE_API_KEY}`;
     const geoRes = await axios.get(geoURL);
-
-    if (!geoRes.data.results.length) {
-      return res.status(404).json({ error: "Invalid zip code" });
-    }
 
     const { lat, lng } = geoRes.data.results[0].geometry;
 
@@ -77,30 +59,21 @@ app.post("/api/weather", async (req, res) => {
       temperature: weatherRes.data.main.temp,
       humidity: weatherRes.data.main.humidity,
       description: weatherRes.data.weather[0].description,
-      unit: tempMetric === "metric" ? "°C" : "°F",
     });
-  } catch (error) {
-    res.status(500).json({
-      message: "Failed to fetch weather data",
-      error: error.message,
-    });
+  } catch (err) {
+    res.status(500).json({ message: "Weather fetch failed" });
   }
 });
 
-// =====================
-// React Frontend (LAST)
-// =====================
+/* React build */
 if (process.env.NODE_ENV === "production") {
   app.use(express.static(path.join(__dirname, "../client/build")));
-
   app.get("*", (req, res) => {
-    res.sendFile(path.join(__dirname, "../client/build", "index.html"));
+    res.sendFile(path.join(__dirname, "../client/build/index.html"));
   });
 }
 
-// =====================
-// Server Start
-// =====================
+/* Start server */
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
