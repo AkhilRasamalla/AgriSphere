@@ -1,64 +1,61 @@
-import React, { useState } from "react";
-import axios from "axios";
-import { useAuth } from "../context/AuthContext";
+import { useState } from "react";
+import { predictCrop } from "../services/cropService";
 
 const CropPredictionForm = () => {
-  const { user } = useAuth();
-
-  const [formData, setFormData] = useState({
-    N: "",
-    P: "",
-    K: "",
-    temperature: "",
-    humidity: "",
-    ph: "",
-    rainfall: "",
-  });
-
+  const [N, setN] = useState("");
+  const [P, setP] = useState("");
+  const [K, setK] = useState("");
+  const [temperature, setTemperature] = useState("");
+  const [humidity, setHumidity] = useState("");
+  const [ph, setPh] = useState("");
+  const [rainfall, setRainfall] = useState("");
   const [result, setResult] = useState(null);
   const [error, setError] = useState("");
-
-  const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError("");
     setResult(null);
 
-    if (!user || !user._id) {
-      setError("User not logged in");
-      return;
-    }
-
     try {
-      const res = await axios.post(
-        "http://localhost:5000/api/crops/predict",
-        {
-          ...formData,
-          user_id: user._id,
-        }
-      );
+      const response = await predictCrop({
+        N: Number(N),
+        P: Number(P),
+        K: Number(K),
+        temperature: Number(temperature),
+        humidity: Number(humidity),
+        ph: Number(ph),
+        rainfall: Number(rainfall),
+      });
 
-      setResult(res.data);
+      setResult(response);
     } catch (err) {
-      setError(
-        err.response?.data?.message || "Prediction failed (backend error)"
-      );
+      setError("Crop prediction failed");
     }
   };
 
   return (
-    <div style={{ maxWidth: 400, margin: "auto" }}>
+    <div className="crop-predict-container">
       <form onSubmit={handleSubmit}>
-        <input name="N" placeholder="Nitrogen" onChange={handleChange} />
-        <input name="P" placeholder="Phosphorus" onChange={handleChange} />
-        <input name="K" placeholder="Potassium" onChange={handleChange} />
-        <input name="temperature" placeholder="Temperature" onChange={handleChange} />
-        <input name="humidity" placeholder="Humidity" onChange={handleChange} />
-        <input name="ph" placeholder="pH" onChange={handleChange} />
-        <input name="rainfall" placeholder="Rainfall" onChange={handleChange} />
+        <input value={N} onChange={(e) => setN(e.target.value)} placeholder="N" />
+        <input value={P} onChange={(e) => setP(e.target.value)} placeholder="P" />
+        <input value={K} onChange={(e) => setK(e.target.value)} placeholder="K" />
+        <input
+          value={temperature}
+          onChange={(e) => setTemperature(e.target.value)}
+          placeholder="Temperature"
+        />
+        <input
+          value={humidity}
+          onChange={(e) => setHumidity(e.target.value)}
+          placeholder="Humidity"
+        />
+        <input value={ph} onChange={(e) => setPh(e.target.value)} placeholder="pH" />
+        <input
+          value={rainfall}
+          onChange={(e) => setRainfall(e.target.value)}
+          placeholder="Rainfall"
+        />
 
         <button type="submit">Predict Crop</button>
       </form>
@@ -68,7 +65,7 @@ const CropPredictionForm = () => {
       {result && (
         <div>
           <h3>Predicted Crop: {result.predictedCrop}</h3>
-          <h3>Predicted Price: {result.predictedPrice}</h3>
+          <h4>Predicted Price: ₹{result.predictedPrice}</h4>
         </div>
       )}
     </div>
