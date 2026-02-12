@@ -1,23 +1,23 @@
 const mongoose = require("mongoose");
 
-const CropPredictSchema = new mongoose.Schema(
+const cropPredictSchema = new mongoose.Schema(
   {
     user_id: {
       type: mongoose.Schema.Types.ObjectId,
-      required: true,
       ref: "User",
+      required: true,
     },
-    N: Number,
-    P: Number,
-    K: Number,
-    temperature: Number,
-    humidity: Number,
-    ph: Number,
-    rainfall: Number,
-    predictedCrop: String,
-    predictedPrice: Number,
+    N: { type: Number, required: true },
+    P: { type: Number, required: true },
+    K: { type: Number, required: true },
+    temperature: { type: Number, required: true },
+    humidity: { type: Number, required: true },
+    ph: { type: Number, required: true },
+    rainfall: { type: Number, required: true },
+    predictedCrop: { type: String, required: true },
+    predictedPrice: { type: Number, required: true },
   },
   { timestamps: true }
 );
 
-module.exports = mongoose.model("CropPredict", CropPredictSchema);
+module.exports = mongoose.model("CropPredict", cropPredictSchema);

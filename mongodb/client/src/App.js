@@ -1,5 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import ProtectedRoute from "./components/ProtectedRoute";
 
 import Navbar from "./components/Navbar";
 import Home from "./components/Home";
@@ -15,6 +16,7 @@ import RegisterSeed from "./components/RegisterSeed";
 import SeedList from "./components/SeedList";
 import RequestManager from "./components/RequestManager";
 import CropPrice from "./components/CropPrice";
+import Dashboard from "./components/Dashboard";
 
 import { ThemeProvider } from "./context/ThemeContext";
 import { AuthProvider } from "./context/AuthContext";
@@ -32,16 +34,96 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/register" element={<RegisterForm />} />
             <Route path="/login" element={<LoginForm />} />
-            <Route path="/profile" element={<Profile />} />
-            <Route path="/predict" element={<CropPredictionForm />} />
-            <Route path="/weather" element={<Weather />} />
-            <Route path="/aboutus" element={<AboutUs />} />
-            <Route path="/farmDetails" element={<FarmDetails />} />
-            <Route path="/plantingCal" element={<PlantingCale />} />
-            <Route path="/registerSeed" element={<RegisterSeed />} />
-            <Route path="/seedList" element={<SeedList />} />
-            <Route path="/requestManager" element={<RequestManager />} />
-            <Route path="/crop-price" element={<CropPrice />} />
+
+            <Route
+              path="/profile"
+              element={
+                <ProtectedRoute>
+                  <Profile />
+                </ProtectedRoute>
+              }
+            />
+
+            <Route
+              path="/predict"
+              element={
+                <ProtectedRoute>
+                  <CropPredictionForm />
+                </ProtectedRoute>
+              }
+            />
+
+            <Route
+              path="/weather"
+              element={
+                <ProtectedRoute>
+                  <Weather />
+                </ProtectedRoute>
+              }
+            />
+
+            <Route
+              path="/farmDetails"
+              element={
+                <ProtectedRoute>
+                  <FarmDetails />
+                </ProtectedRoute>
+              }
+            />
+
+            <Route
+              path="/plantingCal"
+              element={
+                <ProtectedRoute>
+                  <PlantingCale />
+                </ProtectedRoute>
+              }
+            />
+
+            <Route
+              path="/registerSeed"
+              element={
+                <ProtectedRoute>
+                  <RegisterSeed />
+                </ProtectedRoute>
+              }
+            />
+
+            <Route
+              path="/seedList"
+              element={
+                <ProtectedRoute>
+                  <SeedList />
+                </ProtectedRoute>
+              }
+            />
+
+            <Route
+              path="/requests"
+              element={
+                <ProtectedRoute>
+                  <RequestManager />
+                </ProtectedRoute>
+              }
+            />
+
+            <Route
+              path="/crop-price"
+              element={
+                <ProtectedRoute>
+                  <CropPrice />
+                </ProtectedRoute>
+              }
+            />
+
+            <Route
+              path="/dashboard"
+              element={
+                <ProtectedRoute>
+                  <Dashboard />
+                </ProtectedRoute>
+              }
+            />
           </Routes>
         </Router>
       </ThemeProvider>

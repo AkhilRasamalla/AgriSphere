@@ -2,6 +2,9 @@ const express = require("express");
 const router = express.Router();
 const Farm = require("../models/Farm");
 
+/* =========================
+   CREATE FARM
+   ========================= */
 router.post("/", async (req, res) => {
   try {
     const {
@@ -30,14 +33,28 @@ router.post("/", async (req, res) => {
 
     await newFarm.save();
 
-    res.status(201).json({
-      message: "Farm saved successfully",
-      farm: newFarm,
-    });
+    // ✅ Return farm object directly (important fix)
+    res.status(201).json(newFarm);
   } catch (error) {
     console.error("Farm save error:", error);
     res.status(500).json({
       error: "Failed to save farm",
+      details: error.message,
+    });
+  }
+});
+
+/* =========================
+   GET FARM BY USER
+   ========================= */
+router.get("/:userId", async (req, res) => {
+  try {
+    const farm = await Farm.findOne({ user_id: req.params.userId });
+    res.json(farm);
+  } catch (error) {
+    console.error("Farm fetch error:", error);
+    res.status(500).json({
+      error: "Failed to fetch farm",
       details: error.message,
     });
   }

@@ -1,0 +1,39 @@
+.seed-form {
+  max-width: 400px;
+  margin: 80px auto;
+  padding: 30px;
+  background: #111;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.4);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.seed-form h2 {
+  text-align: center;
+  color: white;
+}
+
+.seed-form input,
+.seed-form textarea {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #333;
+  background: #1e1e1e;
+  color: white;
+}
+
+.seed-form button {
+  padding: 10px;
+  border-radius: 6px;
+  border: none;
+  background: #2ecc71;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.seed-form button:hover {
+  background: #27ae60;
+}

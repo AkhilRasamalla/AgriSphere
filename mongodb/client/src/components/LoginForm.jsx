@@ -18,39 +18,37 @@ const Login = () => {
 
     try {
       const res = await axios.post(
-        "http://localhost:5000/api/users/login",
+        "http://localhost:4000/api/users/login",
         { email, password }
       );
 
       login(res.data.user);
       navigate("/predict");
     } catch (err) {
-      setError("Invalid email or password");
+      setError(err.response?.data?.message || "Invalid email or password");
     }
   };
 
   return (
-    <div className="login-page">
-      <div className="login-card">
+    <div className="auth-page">
+      <div className="auth-card">
         <h2>Login</h2>
-        <p className="subtitle">Access your AgriSphere account</p>
+        <p className="auth-subtitle">Access your AgriSphere account</p>
 
-        {error && <div className="error">{error}</div>}
+        {error && <div className="form-error">{error}</div>}
 
-        <form onSubmit={handleSubmit}>
-          <label>Email</label>
+        <form onSubmit={handleSubmit} className="auth-form">
           <input
             type="email"
-            placeholder="you@example.com"
+            placeholder="Email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             required
           />
 
-          <label>Password</label>
           <input
             type="password"
-            placeholder="••••••••"
+            placeholder="Password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             required
@@ -59,7 +57,7 @@ const Login = () => {
           <button type="submit">Login</button>
         </form>
 
-        <p className="footer-text">
+        <p className="auth-footer">
           New user? <Link to="/register">Create account</Link>
         </p>
       </div>

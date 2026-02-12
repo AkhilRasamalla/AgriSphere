@@ -1,25 +1,41 @@
-// C:\Users\Disha\Climate-Smart-Agriculture-Platform\mongodb\server\models\Purchase.js
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 
-const purchaseSchema = new mongoose.Schema({
-    seedName: {
-        type: String,
-        required: true,
+const PurchaseSchema = new mongoose.Schema(
+  {
+    seedId: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "Seed",
+      required: true,
     },
-    quantity: {
-        type: Number,
-        required: true,
-    },
-    buyerName: {
-        type: String,
-        required: true,
-    },
-    purchaseDate: {
-        type: Date,
-        default: Date.now,
-    },
-});
 
-const Purchase = mongoose.model('Purchase', purchaseSchema);
+    buyerId: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "User",
+      required: true,
+    },
 
-module.exports = Purchase;
+    buyerEmail: {
+      type: String,
+      required: true,
+    },
+
+    sellerEmail: {
+      type: String,
+      required: true,
+    },
+
+    requestId: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "Request",
+      required: true,
+    },
+
+    status: {
+      type: String,
+      default: "completed",
+    },
+  },
+  { timestamps: true }
+);
+
+module.exports = mongoose.model("Purchase", PurchaseSchema);

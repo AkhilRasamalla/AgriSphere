@@ -1,101 +1,90 @@
-import React, { useRef, useState } from 'react';
-import { useAuth } from '../context/AuthContext';
+import React, { useState } from "react";
+import API from "../config/api";
+import { useAuth } from "../context/AuthContext";
+import "./RegisterSeed.css";
 
 const RegisterSeed = () => {
   const { user } = useAuth();
-  const fileRef = useRef(null);
 
-  const [seedName, setSeedName] = useState('');
-  const [seedType, setSeedType] = useState('');
-  const [description, setDescription] = useState('');
+  const [form, setForm] = useState({
+    seedName: "",
+    seedType: "",
+    description: "",
+  });
+
   const [image, setImage] = useState(null);
+  const [loading, setLoading] = useState(false);
 
-  const [errorMessage, setErrorMessage] = useState('');
-  const [successMessage, setSuccessMessage] = useState('');
+  const handleChange = (e) =>
+    setForm({ ...form, [e.target.name]: e.target.value });
 
-  const handleSubmit = async (e) => {
+  const submitSeed = async (e) => {
     e.preventDefault();
-    setErrorMessage('');
-    setSuccessMessage('');
 
-    if (!user) {
-      setErrorMessage('Please login first');
+    if (!user || !user._id) {
+      alert("User not logged in properly.");
       return;
     }
 
-    const formData = new FormData();
-    formData.append('seedName', seedName);
-    formData.append('seedType', seedType);
-    formData.append('description', description);
-    formData.append('image', image);
-    formData.append('createdBy', user._id);
-    formData.append('createdByEmail', user.email);
+    setLoading(true);
+
+    console.log("Logged user:", user);
+
+    const data = new FormData();
+    data.append("seedName", form.seedName);
+    data.append("seedType", form.seedType);
+    data.append("description", form.description);
+    data.append("image", image);
+    data.append("createdBy", user._id);
+    data.append("createdByEmail", user.email);
 
     try {
-      const res = await fetch('http://localhost:5000/api/seeds/register', {
-        method: 'POST',
-        body: formData,
-      });
-
-      const data = await res.json();
-
-      if (!res.ok) {
-        throw new Error(data.error || 'Failed to register seed');
-      }
-
-      setSuccessMessage('Seed registered successfully');
-
-      // reset form
-      setSeedName('');
-      setSeedType('');
-      setDescription('');
-      setImage(null);
-      if (fileRef.current) fileRef.current.value = '';
-
-      // auto-hide message
-      setTimeout(() => setSuccessMessage(''), 3000);
+      await API.post("/api/seeds/register", data);
+      alert("Seed registered successfully");
+      window.location.href = "/seedList";
     } catch (err) {
-      setErrorMessage(err.message);
+      console.error("Backend error:", err.response?.data || err);
+      alert("Seed registration failed");
+    } finally {
+      setLoading(false);
     }
   };
 
   return (
-    <div>
-      <h2 style={{ color: 'black' }}>Register Seed</h2>
+    <div className="page">
+      <form className="seed-form" onSubmit={submitSeed}>
+        <h2>Register Seed</h2>
 
-      {errorMessage && <p style={{ color: 'red' }}>{errorMessage}</p>}
-      {successMessage && <p style={{ color: 'green' }}>{successMessage}</p>}
-
-      <form onSubmit={handleSubmit}>
         <input
+          name="seedName"
           placeholder="Seed Name"
-          value={seedName}
-          onChange={(e) => setSeedName(e.target.value)}
+          onChange={handleChange}
           required
         />
 
         <input
-          placeholder="Seed Type"
-          value={seedType}
-          onChange={(e) => setSeedType(e.target.value)}
+          name="seedType"
+          placeholder="Seed Type (Rabi/Kharif)"
+          onChange={handleChange}
           required
         />
 
         <textarea
+          name="description"
           placeholder="Description"
-          value={description}
-          onChange={(e) => setDescription(e.target.value)}
+          onChange={handleChange}
+          required
         />
 
         <input
           type="file"
-          accept="image/*"
-          ref={fileRef}
           onChange={(e) => setImage(e.target.files[0])}
           required
         />
 
-        <button type="submit">Register Seed</button>
+        <button disabled={loading}>
+          {loading ? "Saving..." : "Register Seed"}
+        </button>
       </form>
     </div>
   );

@@ -31,55 +31,57 @@ function RegisterForm() {
       setSuccess("User registered successfully");
       setTimeout(() => navigate("/login"), 1000);
     } catch (err) {
-      setError(err.message);
+      setError(err.response?.data?.message || "Registration failed");
     }
   };
 
   return (
-    <div className="form-container">
-      <h2>Register User</h2>
+    <div className="auth-page">
+      <div className="auth-card">
+        <h2>Register User</h2>
 
-      {error && <div className="popup-error">{error}</div>}
-      {success && <div className="popup-success">{success}</div>}
+        {error && <div className="form-error">{error}</div>}
+        {success && <div className="form-success">{success}</div>}
 
-      <form onSubmit={handleSubmit}>
-        <input
-          type="text"
-          name="username"
-          placeholder="Username"
-          onChange={handleInputChange}
-          required
-        />
+        <form onSubmit={handleSubmit} className="auth-form">
+          <input
+            type="text"
+            name="username"
+            placeholder="Username"
+            onChange={handleInputChange}
+            required
+          />
 
-        <input
-          type="email"
-          name="email"
-          placeholder="Email"
-          onChange={handleInputChange}
-          required
-        />
+          <input
+            type="email"
+            name="email"
+            placeholder="Email"
+            onChange={handleInputChange}
+            required
+          />
 
-        <input
-          type="password"
-          name="password"
-          placeholder="Password"
-          onChange={handleInputChange}
-          required
-        />
+          <input
+            type="password"
+            name="password"
+            placeholder="Password"
+            onChange={handleInputChange}
+            required
+          />
 
-        <select name="notificationFrequency" onChange={handleInputChange}>
-          <option value="daily">Daily</option>
-          <option value="weekly">Weekly</option>
-          <option value="monthly">Monthly</option>
-        </select>
+          <select name="notificationFrequency" onChange={handleInputChange}>
+            <option value="daily">Daily</option>
+            <option value="weekly">Weekly</option>
+            <option value="monthly">Monthly</option>
+          </select>
 
-        <select name="preferredUnits" onChange={handleInputChange}>
-          <option value="metric">Metric</option>
-          <option value="imperial">Imperial</option>
-        </select>
+          <select name="preferredUnits" onChange={handleInputChange}>
+            <option value="metric">Metric</option>
+            <option value="imperial">Imperial</option>
+          </select>
 
-        <button type="submit">Register</button>
-      </form>
+          <button type="submit">Register</button>
+        </form>
+      </div>
     </div>
   );
 }

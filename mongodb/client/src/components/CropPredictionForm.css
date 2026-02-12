@@ -1,0 +1,121 @@
+/* ---------- LIGHT MODE (DEFAULT) ---------- */
+
+.crop-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 0;
+}
+
+.crop-card {
+  background: #ffffff;
+  width: 100%;
+  max-width: 420px;
+  padding: 24px;
+  border-radius: 14px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+}
+
+.crop-title {
+  text-align: center;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 18px;
+  color: #111;
+}
+
+.crop-form {
+  background: #111;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.crop-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.crop-grid input {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #d0d7de;
+  background: #ffffff;
+  color: #000000;
+  font-size: 14px;
+  box-sizing: border-box;   /* FIXES OVERFLOW */
+}
+
+.crop-form button {
+  margin-top: 18px;
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  background: #2e7d32;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.crop-form button:hover {
+  background: #256628;
+}
+
+.result-box {
+  margin-top: 16px;
+  padding: 12px;
+  background: #f1f8e9;
+  border-left: 4px solid #2e7d32;
+  border-radius: 6px;
+  font-size: 14px;
+  color: #111;
+}
+
+.error-text {
+  margin-top: 12px;
+  text-align: center;
+  color: red;
+}
+
+
+/* ---------- DARK MODE ---------- */
+
+.dark .crop-page {
+  background: #0d1117;
+}
+
+.dark .crop-card {
+  background: #161b22;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+}
+
+.dark .crop-title {
+  color: #ffffff;
+}
+
+.dark .crop-form {
+  background: #0d1117;
+  border: 1px solid #30363d;
+}
+
+.dark .crop-grid input {
+  width: 100%;
+  background: #161b22;
+  color: #ffffff;
+  border: 1px solid #30363d;
+  box-sizing: border-box;  /* CONSISTENT */
+}
+
+.dark .crop-grid input::placeholder {
+  color: #8b949e;
+}
+
+.dark .result-box {
+  background: #0f1a12;
+  color: #e6f4ea;
+  border-left: 4px solid #3fb950;
+}

@@ -31,6 +31,23 @@ body {
   color: var(--text);
   font-family: Arial, sans-serif;
 }
+body.dark {
+  background-color: #0f172a;
+  color: #f1f5f9;
+}
+
+body.dark .seed-card {
+  background-color: #1e293b;
+  color: #f1f5f9;
+}
+
+body.dark .seed-info .seller {
+  color: #cbd5e1;
+}
+
+body.dark .seed-card button {
+  background-color: #22c55e;
+}
 
 
 /* body {

@@ -14,7 +14,7 @@ const RequestManager = () => {
     const fetchRequests = async () => {
       try {
         const res = await fetch(
-          `http://localhost:5000/api/requests/owner/${user.email}`
+          `http://localhost:4000/api/requests/owner/${user.email}`
         );
 
         if (!res.ok) throw new Error("Failed to fetch requests");
@@ -34,7 +34,7 @@ const RequestManager = () => {
   const updateStatus = async (id, status) => {
     try {
       const res = await fetch(
-        `http://localhost:5000/api/requests/update/${id}`,
+        `http://localhost:4000/api/requests/update/${id}`,
         {
           method: "PUT",
           headers: { "Content-Type": "application/json" },

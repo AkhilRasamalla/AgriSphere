@@ -1,5 +1,5 @@
+import { Link, NavLink } from "react-router-dom";
 import React from "react";
-import { Link } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
 import { useTheme } from "../context/ThemeContext";
 import "./Navbar.css";
@@ -30,8 +30,20 @@ const Navbar = () => {
               <Link to="/predict">Predict Crop</Link>
               <Link to="/weather">Weather</Link>
               <Link to="/farmDetails">Farm Details</Link>
-              <Link to="/seedList">Seeds</Link>
-              <Link to="/requestManager">Requests</Link>
+              {user && <Link to="/registerSeed">Register Seed</Link>}
+              {user && <Link to="/seedList">Seed List</Link>}
+              {user && <Link to="/requests">Requests</Link>}
+              {user && (
+                <NavLink
+                  to="/dashboard"
+                  className={({ isActive }) =>
+                    isActive ? "nav-link active" : "nav-link"
+                  }
+                >
+                  Dashboard
+                </NavLink>
+              )}
+
               <Link to="/plantingCal">Planting Calendar</Link>
               <Link to="/crop-price">Crop Prices</Link>
             </>

@@ -45,7 +45,7 @@ const PlantingCale = () => {
           <tbody>
             {filtered.map((c, i) => (
               <tr key={i}>
-                <td style={{ color: "#000", fontWeight: "700" }}>{c.name}</td>
+                <td className="pc-crop-name">{c.name}</td>
 
                 <td>{c.north}</td>
                 <td>{c.south}</td>

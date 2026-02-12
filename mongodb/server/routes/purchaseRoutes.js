@@ -1,26 +1,47 @@
-// C:\Users\Disha\Climate-Smart-Agriculture-Platform\mongodb\server\routes\purchaseRoutes.js
-const express = require('express');
-const Purchase = require('../models/Purchase');
+const express = require("express");
+const Purchase = require("../models/Purchase");
 
 const router = express.Router();
 
-// Route to purchase seeds
-router.post('/purchase', async (req, res) => {
-    const { seedName, quantity, buyerName } = req.body;
+/* =========================
+   CREATE PURCHASE
+   ========================= */
+router.post("/create", async (req, res) => {
+  try {
+    const { seedId, buyerId, buyerEmail, sellerEmail, requestId } = req.body;
 
-    try {
-        const newPurchase = new Purchase({
-            seedName,
-            quantity,
-            buyerName,
-        });
+    const newPurchase = new Purchase({
+      seedId,
+      buyerId,
+      buyerEmail,
+      sellerEmail,
+      requestId,
+      status: "completed",
+    });
 
-        await newPurchase.save();
-        res.status(201).json({ message: 'Seed purchased successfully', purchase: newPurchase });
-    } catch (error) {
-        console.error('Error purchasing seed:', error);
-        res.status(500).json({ error: 'Failed to purchase seed' });
-    }
+    await newPurchase.save();
+
+    res.status(201).json(newPurchase);
+  } catch (error) {
+    console.error("Purchase creation error:", error);
+    res.status(500).json({ message: "Failed to create purchase" });
+  }
+});
+
+/* =========================
+   GET PURCHASES BY BUYER
+   ========================= */
+router.get("/buyer/:email", async (req, res) => {
+  try {
+    const purchases = await Purchase.find({
+      buyerEmail: req.params.email,
+    }).populate("seedId");
+
+    res.status(200).json(purchases);
+  } catch (error) {
+    console.error("Fetch purchase error:", error);
+    res.status(500).json({ message: "Failed to fetch purchases" });
+  }
 });
 
 module.exports = router;

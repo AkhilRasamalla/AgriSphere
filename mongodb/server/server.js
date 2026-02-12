@@ -1,12 +1,12 @@
 require("dotenv").config();
 
+
+const cors = require("cors");
 const express = require("express");
 const bodyParser = require("body-parser");
-const cors = require("cors");
 const mongoose = require("mongoose");
 const axios = require("axios");
 const path = require("path");
-
 const farmRoutes = require("./routes/farmRoutes");
 const purchaseRoutes = require("./routes/purchaseRoutes");
 const userRoutes = require("./routes/userRoutes");
@@ -21,10 +21,15 @@ const app = express();
 app.use(bodyParser.json());
 app.use(
   cors({
-    origin: "*",
-    methods: ["GET", "POST", "PUT", "DELETE"],
+    origin: [
+      "http://localhost:3000",
+      "http://localhost:5000",
+      "https://agrisphere-backend-xs0w.onrender.com"
+    ],
+    credentials: true,
   })
 );
+
 
 /* MongoDB */
 mongoose
@@ -36,10 +41,18 @@ mongoose
 app.use("/api/users", userRoutes);
 app.use("/api/crops", cropRoutes);
 app.use("/api/farms", farmRoutes);
-app.use("/api/purchases", purchaseRoutes);
 app.use("/api/seeds", seedRoutes);
 app.use("/api/requests", requestRoutes);
 app.use("/api/prices", priceRoutes);
+app.use("/api/purchases", purchaseRoutes);
+app.use(express.json());
+app.use(
+  "/uploads",
+  express.static(path.join(__dirname, "uploads"))
+);
+
+
+
 
 /* Weather */
 app.post("/api/weather", async (req, res) => {
@@ -65,16 +78,9 @@ app.post("/api/weather", async (req, res) => {
   }
 });
 
-/* React build */
-if (process.env.NODE_ENV === "production") {
-  app.use(express.static(path.join(__dirname, "../client/build")));
-  app.get("*", (req, res) => {
-    res.sendFile(path.join(__dirname, "../client/build/index.html"));
-  });
-}
-
 /* Start server */
-const PORT = process.env.PORT || 5000;
+const PORT = 4000;
+
 app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
+  console.log(`Backend running on port ${PORT}`);
 });

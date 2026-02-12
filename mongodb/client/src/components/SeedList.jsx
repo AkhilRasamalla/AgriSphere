@@ -1,105 +1,83 @@
-import React, { useEffect, useState } from 'react';
-import './SeedList.css';
-import { useAuth } from '../context/AuthContext';
+import React, { useEffect, useState } from "react";
+import { useAuth } from "../context/AuthContext";
+import "./SeedList.css";
 
 const SeedList = () => {
   const { user } = useAuth();
-  const user_id = user?._id;
-  const user_email = user?.email;
-
   const [seeds, setSeeds] = useState([]);
-  const [requestedSeeds, setRequestedSeeds] = useState([]);
-  const [loading, setLoading] = useState(true);
+  const [requested, setRequested] = useState([]);
 
   useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const seedRes = await fetch('http://localhost:5000/api/seeds/all');
-        const seedsData = await seedRes.json();
+    fetch("http://localhost:4000/api/seeds")
+      .then(res => res.json())
+      .then(data => setSeeds(data))
+      .catch(err => console.error(err));
 
-        let requested = [];
-        if (user_id) {
-          const reqRes = await fetch(
-            `http://localhost:5000/api/requests/requester/${user_id}`
-          );
-          requested = await reqRes.json();
-        }
+    if (user?._id) {
+      fetch(`http://localhost:4000/api/requests/requester/${user._id}`)
+        .then(res => res.json())
+        .then(data => setRequested(data.map(r => r.seedId)))
+        .catch(err => console.error(err));
+    }
+  }, [user]);
 
-        setSeeds(seedsData);
-        setRequestedSeeds(requested.map(r => r.seedId));
-        setLoading(false);
-      } catch (err) {
-        console.error(err);
-        setLoading(false);
-      }
-    };
-
-    fetchData();
-  }, [user_id]);
-
-  const handleRequest = async (seed) => {
+  const requestSeed = async (seed) => {
     try {
-      const res = await fetch('http://localhost:5000/api/requests/request', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+      await fetch("http://localhost:4000/api/requests/request", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          requesterId: user_id,
-          requesterEmail: user_email,
+          requesterId: user._id,
+          requesterEmail: user.email,
           seedId: seed._id,
           seedOwnerEmail: seed.createdByEmail,
         }),
       });
 
-      const data = await res.json();
-
-      if (!res.ok) {
-        alert(data.message);
-        return;
-      }
-
-      alert('Request sent');
-      setRequestedSeeds([...requestedSeeds, seed._id]);
+      setRequested([...requested, seed._id]);
+      alert("Request Sent Successfully 🌱");
     } catch (err) {
-      console.error(err);
+      alert("Failed to send request");
     }
   };
 
-  if (loading) return <h3 style={{ textAlign: 'center' }}>Loading...</h3>;
+  if (seeds.length === 0) {
+    return <h3 style={{ textAlign: "center" }}>No seeds available</h3>;
+  }
 
   return (
-    <div className="seed-list-container">
-      <h2 style={{ color: 'black' }}>Available Seeds</h2>
+    <div className="marketplace">
+      <h2 className="market-title">🌱 Seed Marketplace</h2>
 
-      {seeds.length === 0 ? (
-        <p>No seeds available</p>
-      ) : (
-        <div className="seed-list">
-          {seeds.map(seed => {
-            const alreadyRequested = requestedSeeds.includes(seed._id);
+      <div className="seed-grid">
+        {seeds.map(seed => (
+          <div className="seed-card" key={seed._id}>
+            <img
+              src={`http://localhost:4000${seed.image}`}
+              alt={seed.seedName}
+            />
 
-            return (
-              <div className="seed-card" key={seed._id}>
-                <h3>{seed.seedName}</h3>
-                <p><strong>Type:</strong> {seed.seedType}</p>
-                <p><strong>Description:</strong> {seed.description}</p>
-                <p><strong>Owner:</strong> {seed.createdByEmail}</p>
+            <div className="seed-info">
+              <h3>{seed.seedName}</h3>
+              <p className="type">{seed.seedType}</p>
+              <p>{seed.description}</p>
+              <p className="seller">👨‍🌾 Farmer: {seed.createdByEmail}</p>
 
-                <button
-                  className="request-button"
-                  disabled={alreadyRequested}
-                  onClick={() => handleRequest(seed)}
-                  style={{
-                    backgroundColor: alreadyRequested ? '#aaa' : '#28a745',
-                    cursor: alreadyRequested ? 'not-allowed' : 'pointer',
-                  }}
-                >
-                  {alreadyRequested ? 'Request Pending' : 'Request Seed'}
-                </button>
-              </div>
-            );
-          })}
-        </div>
-      )}
+              <button
+                className={
+                  requested.includes(seed._id) ? "requested-btn" : ""
+                }
+                disabled={requested.includes(seed._id)}
+                onClick={() => requestSeed(seed)}
+              >
+                {requested.includes(seed._id)
+                  ? "Request Sent ✓"
+                  : "Request Seed"}
+              </button>
+            </div>
+          </div>
+        ))}
+      </div>
     </div>
   );
 };
