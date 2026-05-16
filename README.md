@@ -1,60 +1,182 @@
-# Climate-Smart Agriculture Platform
+# AgriSphere 🌾
 
-A platform designed to support farmers by providing data-driven insights to improve crop yields and reduce risks from climate variability.
+> An AI-assisted smart agriculture platform providing real-time weather insights, crop predictions, and market price forecasts to help farmers make data-driven decisions.
 
-## Technologies
-- **Frontend**: React, HTML5, CSS3
-- **Backend**: Node.js, Express.js
-- **Database**: MongoDB
-- **APIs**: 
-  - OpenWeatherMap API (for real-time weather data)
-  - OpenCage API (for geocoding)
-  - Custom Machine Learning Models (for crop and price prediction)
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Visit%20Site-brightgreen?style=for-the-badge)](https://agri-sphere-eight.vercel.app/)
+[![GitHub](https://img.shields.io/badge/GitHub-Source%20Code-black?style=for-the-badge&logo=github)](https://github.com/AkhilRasamalla/AgriSphere)
+[![Stack](https://img.shields.io/badge/Stack-React%20%7C%20Node.js%20%7C%20Python%20%7C%20MongoDB-blue?style=for-the-badge)]()
 
-## Features
+---
 
-1. **Real-Time Weather Updates**
-   - Fetches and displays real-time weather data (temperature, humidity, wind speed, precipitation) based on the farm's location using the OpenWeatherMap API.
+## 📸 Preview
 
-2. **Planting Calendar**
-   - Recommends optimal planting dates based on soil data, regional weather patterns, and available resources.
-   - Allows users to manage and adjust planting schedules through an interactive calendar interface.
+> _Add a screenshot of the dashboard here — the weather panel + crop recommendation UI_
 
-3. **Crop Prediction**
-   - Predicts the best crops for current conditions using a machine learning model that takes into account soil nutrient levels (N, P, K), weather conditions, and available resources.
+---
 
-4. **Crop Price Prediction**
-   - Provides price forecasts for crops by analyzing historical market data and demand trends using machine learning.
+## 🎯 What is AgriSphere?
 
-5. **User Registration & Login**
-   - Secure user management with registration, login, and authentication.
-   - Custom navigation options based on whether the user is logged in or not.
+AgriSphere is a full-stack web platform built to support farmers with intelligent, data-backed recommendations. It integrates a React frontend, Node.js backend, and Python-based ML models into a unified platform accessible from any device.
 
-6. **Seed Register & Request System**
-   - Users can register seeds for sale, browse available seeds, and send requests to seed owners.
-   - Seed owners can approve or decline requests. Upon approval, the system sends automatic email notifications to the requester.
+The platform combines real-time weather data, soil analysis, and machine learning crop predictions to give actionable insights — reducing guesswork for farmers dealing with climate variability.
 
-## Setup and Installation
+**[→ See it live here](https://agri-sphere-eight.vercel.app/)**
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/Dishatimbadiya/Climate-Smart-Agriculture-Platform.git
+---
 
+## ✨ Features
 
-2. Install dependencies for both frontend and backend:
-    ```bash
-    cd Climate-Smart-Agriculture-Platform
-    npm install
-    
-3. Set up environment variables by creating a .env file in the root directory of the project. Add the following variables:
-    ```bash
-    MONGODB_LINK=
-    WEATHER_API_KEY=
-    OPENCAGE_API_KEY=
-    DB=
-    EMAIL_USER=
-    EMAIL_PASS=
+### 🌤️ Real-Time Weather Dashboard
+- Fetches live weather data (temperature, humidity, wind speed, precipitation) using the OpenWeatherMap API
+- Location-aware via OpenCage geocoding API
 
-4. Start the development server:
-    ```bash
-    npm run dev
+### 🌱 AI-Powered Crop Prediction
+- ML model analyzes soil nutrient levels (N, P, K), weather conditions, and resources
+- Recommends the best crops to plant for current conditions
+- Python Flask API serves the prediction model
+
+### 💰 Crop Price Forecasting
+- Forecasts market prices using historical data and demand trend analysis
+- Helps farmers plan harvest timing and sales strategy
+
+### 📅 Smart Planting Calendar
+- Recommends optimal planting dates based on weather patterns and soil data
+- Interactive calendar UI for schedule management
+
+### 🌾 Seed Register & Exchange System
+- Farmers can list seeds for sale or request seeds from others
+- Automatic email notifications on request approval/decline
+
+### 🔐 User Authentication
+- Secure registration, login, and session management
+- Role-aware navigation based on auth state
+
+---
+
+## 🛠️ Tech Stack
+
+| Layer | Technology |
+|-------|-----------|
+| Frontend | React.js, HTML5, CSS3 |
+| Backend | Node.js, Express.js |
+| ML / Analytics | Python, scikit-learn, Flask |
+| Database | MongoDB |
+| Weather API | OpenWeatherMap |
+| Geocoding | OpenCage API |
+| Deployment | Vercel (frontend) |
+
+---
+
+## 🏗️ Architecture
+
+```
+AgriSphere/
+├── frontend/                   # React app
+│   ├── src/
+│   │   ├── components/         # Dashboard, weather card, crop card
+│   │   ├── pages/              # Home, predict, calendar, seeds
+│   │   └── services/           # API calls to backend & Python service
+│
+├── backend/                    # Node.js + Express API
+│   ├── routes/                 # Weather, auth, seeds, planting
+│   ├── models/                 # MongoDB schemas
+│   └── server.js
+│
+└── crop-prediction-api/        # Python Flask ML service
+    ├── model/                  # Trained scikit-learn model
+    ├── app.py                  # Flask REST API
+    └── requirements.txt
+```
+
+---
+
+## 🚀 Run Locally
+
+### Prerequisites
+- Node.js v18+
+- Python 3.9+
+- MongoDB URI
+- OpenWeatherMap API key
+- OpenCage API key
+
+### Backend
+```bash
+cd backend
+npm install
+```
+
+Create `backend/.env`:
+```env
+MONGODB_LINK=your_mongodb_uri
+WEATHER_API_KEY=your_openweathermap_key
+OPENCAGE_API_KEY=your_opencage_key
+EMAIL_USER=your_email
+EMAIL_PASS=your_email_password
+```
+
+```bash
+npm start
+```
+
+### Python ML Service
+```bash
+cd crop-prediction-api
+pip install -r requirements.txt
+python app.py
+```
+
+### Frontend
+```bash
+cd frontend
+npm install
+npm run dev
+```
+
+---
+
+## 🤖 ML Model Details
+
+The crop prediction model is trained on agricultural datasets containing:
+- Soil nutrient values (Nitrogen, Phosphorus, Potassium)
+- Temperature and humidity ranges
+- Rainfall data
+- Regional crop yield history
+
+Model type: Random Forest Classifier (via scikit-learn)
+Served via: Python Flask REST API → consumed by Node.js backend
+
+---
+
+## 💡 What I Learned Building This
+
+- Cross-service architecture: connecting React → Node.js → Python Flask in one platform
+- Consuming and transforming third-party weather API data for UI display
+- Integrating a trained ML model into a REST API with Flask
+- Location-aware features using geocoding APIs
+- Email notification system with Nodemailer
+
+---
+
+## 📈 Planned Improvements
+
+- [ ] Mobile app version for field use
+- [ ] Soil sensor IoT integration
+- [ ] Multi-language support (regional Indian languages)
+- [ ] Crop disease detection via image upload (CV model)
+- [ ] Offline mode for low-connectivity farm areas
+
+---
+
+## 👨‍💻 Author
+
+**Akhil Rasamalla**
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?style=flat&logo=linkedin)](https://linkedin.com/in/akhilrasamalla)
+[![GitHub](https://img.shields.io/badge/GitHub-Follow-black?style=flat&logo=github)](https://github.com/AkhilRasamalla)
+[![Portfolio](https://img.shields.io/badge/Portfolio-Visit-orange?style=flat)](https://akhildev.vercel.app)
+
+---
+
+## 📄 License
+
+MIT License
